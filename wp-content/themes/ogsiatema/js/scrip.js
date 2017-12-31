@@ -38,14 +38,14 @@ $( document ).ready(function(){
     }
   }
 
-//SLIDER
+/*SLIDER
    $('.slider2').bxSlider({
       slideWidth: 300,
       minSlides: 1,
       maxSlides: 5,
       slideMargin: 10,
       moveSlides: 1,
-    });
+    });*/
 
   //ANIMACION
   var options = [

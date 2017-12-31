@@ -27,21 +27,18 @@
  </footer>
 
 
+ <?php wp_footer(); ?>
 
  <!--Import jQuery before materialize.js-->
- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
- <script type="text/javascript" src="js/materialize.min.js"></script>
- <script type="text/javascript" src="js/scrip.js"></script>
-
- <!-- bxSlider Javascript file --><font></font>
- <script src="js/jquery.bxslider.min.js"></script><font></font>
- <!-- bxSlider CSS file --><font></font>
- <link href="css/jquery.bxslider.css" rel="stylesheet" />
+ <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/materialize.min.js"></script>
+ <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/scrip.js"></script>
 
  <!--Import Swiper JV -->
- <script src="js/swiper.min.js"></script>
+ <script src="<?php bloginfo('stylesheet_directory');?>/js/swiper.min.js"></script>
+
  <!--SLIKER-->
- <script type="text/javascript" src="slick/slick.min.js"></script>
+ <!--script type="text/javascript" src="slick/slick.min.js"></script-->
 
 </body>
 </html>

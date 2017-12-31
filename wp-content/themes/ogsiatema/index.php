@@ -1,4 +1,5 @@
-<?php include("header.php"); ?>
+
+<?php get_header(); ?> 
 
   <div class="cuerpo">
     <!--div class="row portada-principal portada-1 ">
@@ -16,7 +17,7 @@
 
     <div class="parallax-container">
       <div class="parallax">
-        <img src="images/portadas/portada1.jpg">
+        <img src="<?php bloginfo('template_url')?>/images/portadas/portada1.jpg">
 
       </div>
       <div class="row portada-principal">
@@ -524,4 +525,4 @@
     </div>
   </div>
 
-<?php include("footer.php"); ?>
+<?php get_footer() ?>
