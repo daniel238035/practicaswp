@@ -54,23 +54,23 @@ Version: 1.0
 }
 
 .text-negrita{
-	font-weight: bold;
+	font-weight: bold!important;
 }
 
 .color-primario{
-	color: #0000A8;
+	color: #0000A8!important;
 }
 
 .color-secundario{
-	color: #0072BC;
+	color: #0072BC!important;
 }
 
 .color-oscuro{
-	color: #8F8F8F;
+	color: #8F8F8F!important;
 }
 
 .color-oscuro{
-	color: #8F8F8F;
+	color: #8F8F8F!important;
 }
 
 .height-100{
@@ -86,7 +86,7 @@ Version: 1.0
 }
 
 .btn-principal{
-	background: #0072BC;
+	background: #0072BC!important;
 }
 
 .titulo-portada{
@@ -370,10 +370,16 @@ Version: 1.0
 
 .portada-principal p{
 	margin: 0px!important;
-	font-size: 18px;
+	font-size: 18px!important;
 }
 
-.portada-1{
+.contenido-portada div div {
+  margin: 0px!important;
+  font-size: 18px!important;
+}
+
+/* Portadas Migradas a HEADER*/
+/**.portada-1{
 	background: url('../images/portadas/portada1.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -418,7 +424,7 @@ Version: 1.0
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+}*/
 
 .portada-principal-oscuro{
 	background: rgba(58, 58, 58, 0.3);
@@ -447,7 +453,7 @@ Version: 1.0
 }
 
 .portada-sub{
-	height: 300px;
+	height: 300px!important;
 }
 
 .portada-sub h2{

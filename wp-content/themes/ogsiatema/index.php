@@ -77,6 +77,7 @@
       </div>
     </div>
 
+    <!--MOVILIDAD ESTUDIANTIL Inicio-->
     <div class="row hide-on-med-and-down portada-secundario portada-4 ">
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
@@ -86,45 +87,65 @@
                   <div class="col s12 ">
                     <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                   </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 3,
+                          "cat" => 4,
+                          //'post_type'=>'',
+                          'order' => 'ASC'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
                       <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
                       </div>
                     </div>
                   </div>
+                  <?php endwhile; ?>
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  <!-- no posts found -->
                   <div class="col s12 item">
                     <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                      <div class="col s4 bg-secundario l">
+                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
                       </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                      </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                      <div class="col s7">
+                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
                       </div>
                     </div>
                   </div>
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+
                   <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="http://localhost/practicas/convocatoria.php">Ver más</a>
+                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
                   </div>
+
                 </div>
               </div>
             </div>
             <div class="col s12 l5 offset-l1">
-              <h2 class="white-text">MOVILIDAD ESTUDIANTIL</h2>
-              <p class="white-text">A través de los distintos convenios firmados, nuestros estudiantes pueden aplicar para cursar un semestre académico en universidades del  Perú o el extranjero. </p>
+
+            <!--Llamar Pagina de  Wordpress Inicio-->
+            <?php
+            query_posts('pagename=Movilidad Estudiantil');
+            while (have_posts()) : the_post();
+            ?>
+              <h2 class="white-text"><?php the_title()?></h2>
+              <div class="white-text contenido-portada"><?php the_field( 'descripcion_movilidad_estudiantil' ); ?></div>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+            <!--Llamar Pagina de  Wordpress Fin-->
+
             </div>
           </div>
       </div>
@@ -135,8 +156,18 @@
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l5 offset-l1">
-              <h4 class="white-text text-negrita">MOVILIDAD ESTUDIANTIL</h4>
-              <p class="white-text">A través de los distintos convenios firmados, nuestros estudiantes pueden aplicar para cursar un semestre académico en universidades del  Perú o el extranjero. </p>
+
+              <!--Llamar Pagina de  Wordpress Inicio-->
+            <?php
+            query_posts('pagename=Movilidad Estudiantil');
+            while (have_posts()) : the_post();
+            ?>
+              <h4 class="white-text"><?php the_title()?></h4>
+              <div class="white-text " style="margin:10px 0px!important;"><?php the_field( 'descripcion_movilidad_estudiantil' ); ?></div>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+            <!--Llamar Pagina de  Wordpress Fin-->
+
             </div>
             <div class="col s12 l4 offset-l1">
               <div class="container">
@@ -144,38 +175,47 @@
                   <div class="col s12 ">
                     <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                   </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 3,
+                          "cat" => 4,
+                          //'post_type'=>'',
+                          'order' => 'ASC'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
                       <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
                       </div>
                     </div>
                   </div>
+                  <?php endwhile; ?>
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  <!-- no posts found -->
                   <div class="col s12 item">
                     <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                      <div class="col s4 bg-secundario l">
+                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
                       </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                      </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                      <div class="col s7">
+                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
                       </div>
                     </div>
                   </div>
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+                  
                   <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="http://localhost/practicas/convocatoria.php">Ver más</a>
+                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
                   </div>
                 </div>
               </div>
@@ -184,6 +224,8 @@
           </div>
       </div>
     </div>
+    <!--MOVILIDAD ESTUDIANTIL Fin-->
+
 
     <div class="row hide-on-med-and-down portada-secundario portada-3 ">
       <div class="portada-principal-oscuro flex seccion-2">
@@ -402,7 +444,7 @@
 
     <div class="row bg-fondo-oscuro seccion-2">
       <div class="container ">
-        <div class="col s12 l4 altura-igual-1">
+        <div class="col s12 l4 altura-igual-2">
           <div class=" card card-seccion-2 row white" style="height:100%;">
             <div class="col s12 ">
               <h5 class="titulo-borde-izquierdo-2">Últimas Noticias</h5>
@@ -410,7 +452,7 @@
             <div class="col s12 item">
               <div class="row">
                 <div class="col s12">
-                  <img class="responsive-img" src="images/portadas/portada1.jpg" alt="">
+                  <img class="responsive-img" src="<?php bloginfo('template_url')?>/images/portadas/portada1.jpg" alt="">
                 </div>
                 <div class="col s12">
                   <h5 class="color-secundario titulo-item">09 de Noviembre</h5>
@@ -423,7 +465,7 @@
             </div>
           </div>
         </div>
-        <div class="col s12 l8 altura-igual-1">
+        <div class="col s12 l8 altura-igual-2">
           <div class=" card card-seccion-2 row white" style="height:100%;">
             <div class="col s12 ">
               <h5 class="titulo-borde-izquierdo-2">Proximos Eventos</h5>

@@ -18,7 +18,54 @@
       <!--FONTS IMPORTADOS-->
       <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Viga" rel="stylesheet">
+      <style>
+        .portada-1{
+          background: url('<?php bloginfo('template_url')?>/images/portadas/portada1.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
 
+        .portada-2{
+          background: url('<?php bloginfo('template_url')?>/images/portadas/portada3.jpg');
+          height: 500px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .portada-3{
+          background: url('<?php bloginfo('template_url')?>/images/portadas/portada5.jpg');
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .portada-4{
+          background: url('<?php bloginfo('template_url')?>/images/portadas/portada6.jpg');
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .portada-5{
+          background: url('<?php bloginfo('template_url')?>/images/portadas/portada4.jpg');
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .portada-form{
+          background: url('<?php bloginfo('template_url')?>/images/portadas/portadaform.jpg');
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
     </head>
 
     <body class="">
