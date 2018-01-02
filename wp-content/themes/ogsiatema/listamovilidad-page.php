@@ -34,7 +34,7 @@ Template Name: Página Movilidad
                         "showposts" => 18,
                         "cat" => 4,
                         //'post_type'=>'',
-                        'order' => 'ASC'
+                        'order' => 'DES'
                         ));
                 ?>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -80,7 +80,7 @@ Template Name: Página Movilidad
                                   <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Duración">date_range</i>
                                 </div>
                                 <div class="col s10">
-                                  <?php the_field( 'institucion' ); ?>
+                                  <?php the_field( 'duracion_de_convocatoria' ); ?>
                                 </div>
                             </div>
                           </div>
