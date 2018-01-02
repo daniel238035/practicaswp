@@ -34,7 +34,7 @@ Template Name: Página Movilidad
                         "showposts" => 18,
                         "cat" => 4,
                         //'post_type'=>'',
-                        'order' => 'ASC'
+                        'order' => 'DES'
                         ));
                 ?>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
