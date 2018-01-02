@@ -42,7 +42,7 @@ Template Name: Página Movilidad
                   <div class="col s12 m4">
                     <div class="card" style="padding:0px!important;">
                       <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/portadas/portada3.jpg">
+                        <img class="activator" src="<?php bloginfo('template_url')?>/images/portadas/portada3.jpg">
                       </div>
                       <div class="card-content" style="padding:15px!important;">
                         <div class="row flex-row">

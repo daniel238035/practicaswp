@@ -75,8 +75,7 @@
 
               <div class="col s12 " id="presentacion" style="margin:15px 0px!important;">
                 <h4 class="color-secundario" >Presentación</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque in debitis pariatur sequi veniam corporis officia ducimus officiis, possimus, maxime beatae assumenda quae tempore a consequatur libero ullam dignissimos quam, quia vel modi ex. Dicta nisi unde quasi id voluptatibus molestiae mollitia quidem et optio, provident veniam illum vitae soluta atque quaerat, est in possimus repellat quis pariatur, a dolore! Dolorem saepe voluptatibus debitis nostrum vero! Id quod labore iste dicta debitis porro dolorem quae eligendi, nam blanditiis! Quod, architecto vel aut minima, quas officiis itaque cupiditate asperiores facilis aperiam illo aliquid labore animi? Laboriosam ab quod officia necessitatibus porro!
-                </p>
+                <div><?php the_field( 'presentacion' ); ?></div>
               </div>
 
               <div class="col s12 " id="beneficios" style="margin:15px 0px!important;">
