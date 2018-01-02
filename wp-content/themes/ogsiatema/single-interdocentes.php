@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php get_header(); ?> 
 
 
   <div class="cuerpo">
@@ -18,7 +18,7 @@
 
         <div class="parallax-container portada-sub portada-principal-oscuro">
           <div class="parallax">
-            <img src="images/portadas/portada5.jpg">
+            <img src="<?php bloginfo('template_url')?>/images/portadas/portada5.jpg">
 
           </div>
           <div class="row   ">
@@ -40,7 +40,7 @@
           <div class="col s12 offset-l1 l7">
 
             <div class="row">
-              <h4 class="text-negrita">Beca Presidente de la Republica</h4>
+              <h4 class="text-negrita"><?php the_title()?></h4>
             </div>
 
             <div class="row" style="padding-bottom: 5px">
@@ -51,7 +51,7 @@
                       Institución:
                     </div>
                     <div class="col s12 l8">
-                      Universidad Nacional Pedro Ruiz Gallo
+                       <?php the_field( 'institucion' ); ?>  
                     </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                       Inicio:
                     </div>
                     <div class="col s12 l8">
-                      18 de agosto del 2017
+                       <?php the_field( 'inicio_de_convocatoria' ); ?>
                     </div>
                 </div>
                 <div class="row" style="margin: 8px 0px!important;">
@@ -71,7 +71,7 @@
                       Duración:
                     </div>
                     <div class="col s12 l8">
-                      3 años
+                       <?php the_field( 'duracion_de_convocatoria' ); ?>
                     </div>
                 </div>
               </div>
@@ -83,8 +83,7 @@
 
               <div class="col s12 " id="presentacion" style="margin:15px 0px!important;">
                 <h4 class="color-secundario" >Presentación</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque in debitis pariatur sequi veniam corporis officia ducimus officiis, possimus, maxime beatae assumenda quae tempore a consequatur libero ullam dignissimos quam, quia vel modi ex. Dicta nisi unde quasi id voluptatibus molestiae mollitia quidem et optio, provident veniam illum vitae soluta atque quaerat, est in possimus repellat quis pariatur, a dolore! Dolorem saepe voluptatibus debitis nostrum vero! Id quod labore iste dicta debitis porro dolorem quae eligendi, nam blanditiis! Quod, architecto vel aut minima, quas officiis itaque cupiditate asperiores facilis aperiam illo aliquid labore animi? Laboriosam ab quod officia necessitatibus porro!
-                </p>
+                <div><?php the_field( 'presentacion' ); ?></div>
               </div>
 
               <div class="col s12 " id="beneficios" style="margin:15px 0px!important;">
@@ -265,5 +264,4 @@
 
 
 
-
-<?php include("footer.php"); ?>
+<?php get_footer() ?>
