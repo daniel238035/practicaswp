@@ -13,15 +13,28 @@ Template Name: Página Eventos
 		</div>
 		<div class="container seccion">
 			<div class="row" style="margin-bottom: 10px!important" >
+
+					<!--LOOP Wordpress Inicio-->
+					<?php
+                      query_posts(array(
+                        "showposts" => 2,
+                        "cat" => 11,
+                        //'post_type'=>'',
+                        'order' => 'DES'
+                        ));
+                	?>
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+
 				<div class="col s12 m6">
 					<div class="card" style="padding:0px!important;">
 						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="images/portadas/portada3.jpg">
+							<img class="activator" src="<?php the_field( 'portada_de_noticia' ); ?>">
 						</div>
 						<div class="card-content" style="padding:15px!important;">
 							<div class="row flex-row">
 								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator">Nombre del Evento</h5>
+									<h5 class="titulo-borde-izquierdo-2 activator"><?php the_title() ?></h5>
 								</div>
 								<div class="col s2">
 									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
@@ -34,7 +47,7 @@ Template Name: Página Eventos
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Lugar">place</i>
 											</div>
 											<div class="col s10">
-												Universidad Nacional Pedro Ruiz Gallo
+												<?php the_field( 'lugar_de_evento' ); ?>
 											</div>
 									</div>
 								</div>
@@ -44,7 +57,7 @@ Template Name: Página Eventos
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Fecha">event</i>
 											</div>
 											<div class="col s10">
-												18 de agosto del 2017
+											<?php the_field( 'fecha_de_evento'); ?>
 											</div>
 									</div>
 								</div>
@@ -54,92 +67,54 @@ Template Name: Página Eventos
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Hora">date_range</i>
 											</div>
 											<div class="col s10">
-												3:00 pm
+												<?php the_field('hora_de_Evento');?>
 											</div>
 									</div>
 								</div>
-							</div>
-
+							</div>							
 						</div>
 						<div class="card-action" style="padding: 5px 5px!important">
-							<a class="btn btn-flat green-text text-negrita" href="http://localhost/practicas/movilidad.php" >Más</a>
+							<a class="btn btn-flat green-text text-negrita" href="<?php the_permalink() ?>" >Más</a>
 						</div>
 						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">Nombre de la Convocatoria<i class="material-icons right">close</i></span>
-							<p>Here is some more information about this product that is only revealed once clicked on.</p>
+							<span class="card-title grey-text text-darken-4"><?php the_title() ?><i class="material-icons right">close</i></span>
+							<?php the_field( 'contenido_resumen_evento' ); ?>
 						</div>
 					</div>
 				</div>
 
-				<div class="col s12 m6">
-					<div class="card" style="padding:0px!important;">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="images/portadas/portada3.jpg">
-						</div>
-						<div class="card-content" style="padding:15px!important;">
-							<div class="row flex-row">
-								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator">Nombre del Evento</h5>
-								</div>
-								<div class="col s2">
-									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row" >
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Lugar">place</i>
-											</div>
-											<div class="col s10">
-												Universidad Nacional Pedro Ruiz Gallo
-											</div>
-									</div>
-								</div>
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row">
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Fecha">event</i>
-											</div>
-											<div class="col s10">
-												18 de agosto del 2017
-											</div>
-									</div>
-								</div>
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row">
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Hora">date_range</i>
-											</div>
-											<div class="col s10">
-												3:00 pm
-											</div>
-									</div>
-								</div>
-							</div>
+				<?php endwhile; ?>
+                <!-- post navigation -->
+                <?php else: ?>
+                <!-- no posts found -->
+                <?php endif; ?>
+                <?php wp_reset_query(); ?>
+                <!--LOOP Wordpress Fin-->
 
-						</div>
-						<div class="card-action" style="padding: 5px 5px!important">
-							<a class="btn btn-flat green-text text-negrita" href="http://localhost/practicas/movilidad.php" >Más</a>
-						</div>
-						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">Nombre de la Convocatoria<i class="material-icons right">close</i></span>
-							<p>Here is some more information about this product that is only revealed once clicked on.</p>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 
 			<div class="row">
+			<!--LOOP Wordpress Inicio-->
+			<?php
+                      query_posts(array(
+                        "showposts" => 9,
+                        "cat" => 8,
+                        //'post_type'=>'',
+                        'order' => 'DES'
+                        ));
+                ?>
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 				<div class="col s12 m4">
 					<div class="card" style="padding:0px!important;">
 						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="images/portadas/portada3.jpg">
+							<img class="activator" src="<?php the_field( 'portada_de_evento' ); ?>">
 						</div>
 						<div class="card-content" style="padding:15px!important;">
 							<div class="row flex-row">
 								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator">Nombre del Evento</h5>
+									<h5 class="titulo-borde-izquierdo-2 activator"><?php the_title() ?></h5>
 								</div>
 								<div class="col s2">
 									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
@@ -152,7 +127,7 @@ Template Name: Página Eventos
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Lugar">place</i>
 											</div>
 											<div class="col s10">
-												Universidad Nacional Pedro Ruiz Gallo
+												<?php the_field( 'lugar_de_evento' ); ?>
 											</div>
 									</div>
 								</div>
@@ -162,7 +137,7 @@ Template Name: Página Eventos
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Fecha">event</i>
 											</div>
 											<div class="col s10">
-												18 de agosto del 2017
+												<?php the_field( 'fecha_de_evento' ); ?>
 											</div>
 									</div>
 								</div>
@@ -172,7 +147,7 @@ Template Name: Página Eventos
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Hora">date_range</i>
 											</div>
 											<div class="col s10">
-												3:00 pm
+												<?php the_field( 'hora_de_Evento' ); ?>
 											</div>
 									</div>
 								</div>
@@ -180,128 +155,21 @@ Template Name: Página Eventos
 
 						</div>
 						<div class="card-action" style="padding: 5px 5px!important">
-							<a class="btn btn-flat green-text text-negrita" href="http://localhost/practicas/movilidad.php" >Más</a>
+							<a class="btn btn-flat green-text text-negrita" href="<?php the_permalink() ?>" >Más</a>
 						</div>
 						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">Nombre de la Convocatoria<i class="material-icons right">close</i></span>
-							<p>Here is some more information about this product that is only revealed once clicked on.</p>
+							<span class="card-title grey-text text-darken-4"><?php the_title() ?><i class="material-icons right">close</i></span>
+							<?php the_field( 'contenido_resumen_evento' ); ?>
 						</div>
 					</div>
 				</div>
-				<div class="col s12 m4">
-					<div class="card" style="padding:0px!important;">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="images/portadas/portada3.jpg">
-						</div>
-						<div class="card-content" style="padding:15px!important;">
-							<div class="row flex-row">
-								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator">Nombre del Evento</h5>
-								</div>
-								<div class="col s2">
-									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row" >
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Lugar">place</i>
-											</div>
-											<div class="col s10">
-												Universidad Nacional Pedro Ruiz Gallo
-											</div>
-									</div>
-								</div>
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row">
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Fecha">event</i>
-											</div>
-											<div class="col s10">
-												18 de agosto del 2017
-											</div>
-									</div>
-								</div>
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row">
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Hora">date_range</i>
-											</div>
-											<div class="col s10">
-												3:00 pm
-											</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="card-action" style="padding: 5px 5px!important">
-							<a class="btn btn-flat green-text text-negrita" href="http://localhost/practicas/movilidad.php" >Más</a>
-						</div>
-						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">Nombre de la Convocatoria<i class="material-icons right">close</i></span>
-							<p>Here is some more information about this product that is only revealed once clicked on.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card" style="padding:0px!important;">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="images/portadas/portada3.jpg">
-						</div>
-						<div class="card-content" style="padding:15px!important;">
-							<div class="row flex-row">
-								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator">Nombre del Evento</h5>
-								</div>
-								<div class="col s2">
-									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row" >
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Lugar">place</i>
-											</div>
-											<div class="col s10">
-												Universidad Nacional Pedro Ruiz Gallo
-											</div>
-									</div>
-								</div>
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row">
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Fecha">event</i>
-											</div>
-											<div class="col s10">
-												18 de agosto del 2017
-											</div>
-									</div>
-								</div>
-								<div class="col s12" style="margin: 8px 0px!important;">
-									<div class="row">
-											<div class="col s2 flex-row-start">
-												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Hora">date_range</i>
-											</div>
-											<div class="col s10">
-												3:00 pm
-											</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="card-action" style="padding: 5px 5px!important">
-							<a class="btn btn-flat green-text text-negrita" href="http://localhost/practicas/movilidad.php" >Más</a>
-						</div>
-						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">Nombre de la Convocatoria<i class="material-icons right">close</i></span>
-							<p>Here is some more information about this product that is only revealed once clicked on.</p>
-						</div>
-					</div>
-				</div>
+				<?php endwhile; ?>
+                <!-- post navigation -->
+                <?php else: ?>
+                <!-- no posts found -->
+                <?php endif; ?>
+                <?php wp_reset_query(); ?>
+                <!--LOOP Wordpress Fin-->
 			</div>
 		</div>
 </div>
