@@ -17,7 +17,7 @@ Template Name: Página Otras Convocatorias
           <div class="row">
             <div class="col s12 l5 offset-l1">
               <h2 class="white-text"><?php the_title() ?></h2>
-              <p class="white-text"><?php the_field( 'descripcion_movilidad_estudiantil' ); ?></p>
+              <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
             </div>
           </div>
       </div>
@@ -47,14 +47,14 @@ Template Name: Página Otras Convocatorias
                     <div class="card-content" style="padding:15px!important;">
                       <div class="row flex-row">
                         <div class="col s10">
-                          <h5 class="titulo-borde-izquierdo-2 activator"><?php the_title() ?></h5>
+                          <h5 class="titulo-borde-izquierdo-2 activator altura-igual-convocatoria-titulo"><?php the_title() ?></h5>
                         </div>
                         <div class="col s2">
                           <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col s12" style="margin: 8px 0px!important;">
+                        <div class="col s12 altura-igual-convocatoria-contenido" style="margin: 8px 0px!important;">
                           <div class="row" >
                               <div class="col s2 flex-row-start">
                                 <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Institución">place</i>

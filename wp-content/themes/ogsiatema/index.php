@@ -94,10 +94,11 @@
                           "showposts" => 3,
                           "cat" => 4,
                           //'post_type'=>'',
-                          'order' => 'ASC'
+                          'order' => 'DES'
                           ));
                   ?>
                   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                  
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
@@ -108,6 +109,7 @@
                       </div>
                     </div>
                   </div>
+
                   <?php endwhile; ?>
                   <!-- post navigation -->
                   <?php else: ?>
@@ -141,7 +143,7 @@
             while (have_posts()) : the_post();
             ?>
               <h2 class="white-text"><?php the_title()?></h2>
-              <div class="white-text contenido-portada"><?php the_field( 'descripcion_movilidad_estudiantil' ); ?></div>
+              <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
             <!--Llamar Pagina de  Wordpress Fin-->
@@ -157,13 +159,13 @@
           <div class="row">
             <div class="col s12 l5 offset-l1">
 
-              <!--Llamar Pagina de  Wordpress Inicio-->
+            <!--Llamar Pagina de  Wordpress Inicio-->
             <?php
             query_posts('pagename=Movilidad Estudiantil');
             while (have_posts()) : the_post();
             ?>
               <h4 class="white-text"><?php the_title()?></h4>
-              <div class="white-text " style="margin:10px 0px!important;"><?php the_field( 'descripcion_movilidad_estudiantil' ); ?></div>
+              <div class="white-text " style="margin:10px 0px!important;"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
             <!--Llamar Pagina de  Wordpress Fin-->
@@ -182,7 +184,7 @@
                           "showposts" => 3,
                           "cat" => 4,
                           //'post_type'=>'',
-                          'order' => 'ASC'
+                          'order' => 'DES'
                           ));
                   ?>
                   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -226,52 +228,72 @@
     </div>
     <!--MOVILIDAD ESTUDIANTIL Fin-->
 
-
+    <!--INTERNACIONALIZACIÓN DOCENTE Inicio-->                      
     <div class="row hide-on-med-and-down portada-secundario portada-3 ">
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l6 offset-l1">
-              <h2 class="white-text">INTERNACIONALIZACIÓN DOCENTE</h2>
-              <p class="white-text">Nuestros docentes tienen la oportunidad de participar en actividades de capacitación e investigación en colaboración con reconocidas instituciones académicas nacionales e internacionales.</p>
+              <!--Llamar Pagina de  Wordpress Inicio-->
+              <?php
+              query_posts('pagename=Internacionalizacion Docentes');
+              while (have_posts()) : the_post();
+              ?>
+                <h2 class="white-text"><?php the_title()?></h2>
+                <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <?php endwhile; ?>
+              <?php wp_reset_query(); ?>
+              <!--Llamar Pagina de  Wordpress Fin-->
             </div>
+
             <div class="col s12 l4">
               <div class="container">
                 <div class=" card card-seccion-2 row white">
                   <div class="col s12 ">
                     <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                   </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 3,
+                          "cat" => 5,
+                          //'post_type'=>'',
+                          'order' => 'DES'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                  
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
                       <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
                       </div>
                     </div>
                   </div>
+                  
+                  <?php endwhile; ?>
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  <!-- no posts found -->
                   <div class="col s12 item">
                     <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                      <div class="col s4 bg-secundario l">
+                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
                       </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                      </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                      <div class="col s7">
+                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
                       </div>
                     </div>
                   </div>
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+
                   <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="http://localhost/practicas/convocatoria.php">Ver más</a>
+                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 15 ) ?>">Ver más</a>
                   </div>
                 </div>
               </div>
@@ -285,55 +307,78 @@
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l6 offset-l1">
-              <h5 class="white-text text-negrita">INTERNACIONALIZACIÓN DOCENTE</h5>
-              <p class="white-text">Nuestros docentes tienen la oportunidad de participar en actividades de capacitación e investigación en colaboración con reconocidas instituciones académicas nacionales e internacionales.</p>
+              <!--Llamar Pagina de  Wordpress Inicio-->
+              <?php
+              query_posts('pagename=Internacionalizacion Docentes');
+              while (have_posts()) : the_post();
+              ?>
+                <h4 class="white-text"><?php the_title()?></h4>
+                <div class="white-text " style="margin:10px 0px!important;"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <?php endwhile; ?>
+              <?php wp_reset_query(); ?>
+              <!--Llamar Pagina de  Wordpress Fin-->
             </div>
+
             <div class="col s12 l4">
               <div class="container">
                 <div class=" card card-seccion-2 row white">
                   <div class="col s12 ">
                     <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                   </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 3,
+                          "cat" => 5,
+                          //'post_type'=>'',
+                          'order' => 'DES'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
                       <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
                       </div>
                     </div>
                   </div>
+                  <?php endwhile; ?>
+                  
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  <!-- no posts found -->
                   <div class="col s12 item">
                     <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                      <div class="col s4 bg-secundario l">
+                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
                       </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                      </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                      <div class="col s7">
+                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
                       </div>
                     </div>
                   </div>
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+                  
                   <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="http://localhost/practicas/convocatoria.php">Ver más</a>
+                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 15 ) ?>">Ver más</a>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
       </div>
     </div>
-
+    <!--INTERNACIONALIZACIÓN DOCENTE Fin--> 
+    
+    <!--OTRAS CONVOCATORIAS Inicio-->  
     <div class="row hide-on-med-and-down portada-secundario portada-5 ">
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
@@ -343,45 +388,64 @@
                   <div class="col s12 ">
                     <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                   </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 3,
+                          "cat" => 6,
+                          //'post_type'=>'',
+                          'order' => 'DES'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
                       <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
                       </div>
                     </div>
                   </div>
+                  
+                  <?php endwhile; ?>
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  <!-- no posts found -->
                   <div class="col s12 item">
                     <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                      <div class="col s4 bg-secundario l">
+                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
                       </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                      </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                      <div class="col s7">
+                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
                       </div>
                     </div>
                   </div>
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+
                   <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="#">Ver más</a>
+                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 19 ) ?>">Ver más</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col s12 l5 offset-l1">
-              <h2 class="white-text">OTRAS CONVOCATORIAS</h2>
-              <p class="white-text">Aquí podrás encontrar información sobre los programas nacionales e internacionales de formación e intercambios de carácter universitario.</p>
+              <!--Llamar Pagina de  Wordpress Inicio-->
+              <?php
+              query_posts('pagename=Otras Convocatorias');
+              while (have_posts()) : the_post();
+              ?>
+                <h2 class="white-text"><?php the_title()?></h2>
+                <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <?php endwhile; ?>
+              <?php wp_reset_query(); ?>
+              <!--Llamar Pagina de  Wordpress Fin-->
             </div>
           </div>
       </div>
@@ -392,47 +456,67 @@
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l5 offset-l1">
-              <h4 class="white-text text-negrita">OTRAS CONVOCATORIAS</h4>
-              <p class="white-text">Aquí podrás encontrar información sobre los programas nacionales e internacionales de formación e intercambios de carácter universitario.</p>
+              <!--Llamar Pagina de  Wordpress Inicio-->
+              <?php
+              query_posts('pagename=Otras Convocatorias');
+              while (have_posts()) : the_post();
+              ?>
+                <h4 class="white-text"><?php the_title()?></h4>
+                <div class="white-text " style="margin:10px 0px!important;"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <?php endwhile; ?>
+              <?php wp_reset_query(); ?>
+              <!--Llamar Pagina de  Wordpress Fin-->
             </div>
+
             <div class="col s12 l4 offset-l1">
               <div class="container">
                 <div class=" card card-seccion-2 row white">
                   <div class="col s12 ">
                     <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                   </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 3,
+                          "cat" => 5,
+                          //'post_type'=>'',
+                          'order' => 'DES'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
                   <div class="col s12 item">
                     <div class="row">
                       <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
                       <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
                       </div>
                     </div>
                   </div>
+                  <?php endwhile; ?>
+                  
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  <!-- no posts found -->
                   <div class="col s12 item">
                     <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                      <div class="col s4 bg-secundario l">
+                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
                       </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                      </div>
-                      <div class="col s8">
-                        <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                      <div class="col s7">
+                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
                       </div>
                     </div>
                   </div>
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+
                   <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="#">Ver más</a>
+                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 19 ) ?>">Ver más</a>
                   </div>
                 </div>
               </div>
@@ -441,6 +525,8 @@
           </div>
       </div>
     </div>
+    <!--OTRAS CONVOCATORIAS Fin--> 
+
 
     <div class="row bg-fondo-oscuro seccion-2">
       <div class="container ">
@@ -449,22 +535,45 @@
             <div class="col s12 ">
               <h5 class="titulo-borde-izquierdo-2">Últimas Noticias</h5>
             </div>
-            <div class="col s12 item">
-              <div class="row">
-                <div class="col s12">
-                  <img class="responsive-img" src="<?php bloginfo('template_url')?>/images/portadas/portada1.jpg" alt="">
-                </div>
-                <div class="col s12">
-                  <h5 class="color-secundario titulo-item">09 de Noviembre</h5>
-                  <h5 class="color-oscuro titulo-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</h5>
-                </div>
-              </div>
-            </div>
+
+                  <!--LOOP Wordpress Inicio-->
+                  <?php
+                        query_posts(array(
+                          "showposts" => 1,
+                          "cat" => 12,
+                          //'post_type'=>'',
+                          'order' => 'DES'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                  <div class="col s12 item">
+                    <div class="row">
+                      <div class="col s12">
+                        <img class="responsive-img" src="<?php the_field( 'portada_de_noticia' ); ?>" alt="">
+                      </div>
+                      <div class="col s12">
+                        <h5 class="color-secundario titulo-item"><?php the_field( 'fecha_de_noticia' ); ?></h5>
+                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title() ?></h5></a>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <?php endwhile; ?>
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  
+                  <!-- no posts found -->
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+                  
             <div class="col s12 item" >
-              <a class="btn btn-flat color-secundario text-negrita" href="#">Ver más Noticias</a>
+              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 21 ) ?>">Ver más Noticias</a>
             </div>
           </div>
         </div>
+
         <div class="col s12 l8 altura-igual-2">
           <div class=" card card-seccion-2 row white" style="height:100%;">
             <div class="col s12 ">

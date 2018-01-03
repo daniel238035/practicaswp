@@ -123,6 +123,12 @@ $( document ).ready(function(){
     $(document).ready(function() {
     equalHeight($(".altura-igual-2"));
     });
+    $(document).ready(function () {
+      equalHeight($(".altura-igual-convocatoria-titulo"));
+    });
+    $(document).ready(function () {
+      equalHeight($(".altura-igual-convocatoria-contenido"));
+    });
 
 
     //Swiper efects

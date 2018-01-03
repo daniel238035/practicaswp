@@ -69,7 +69,7 @@
               </div>
               <div class="col s12 hide-on-med-and-down">
                 <div class="row" style="margin: 15px 0px!important;">
-        					<img src="images/portadas/portada3.jpg" class="responsive-img z-depth-1 imagen-evento" style="width: 100%;!important; height:450px!important;">
+        					<img src="<?php the_field( 'imagen_de_portada_convocatoria' ); ?>" class="responsive-img z-depth-1 imagen-evento" style="width: 100%;!important; height:450px!important;">
         				</div>
               </div>
 
