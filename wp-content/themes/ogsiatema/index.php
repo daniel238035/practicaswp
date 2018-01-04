@@ -579,36 +579,36 @@
             <div class="col s12 ">
               <h5 class="titulo-borde-izquierdo-2">Proximos Eventos</h5>
             </div>
+             <!--LOOP Wordpress Inicio-->
+             <?php
+                        query_posts(array(
+                          "showposts" => 1,
+                          "cat" => 11,
+                          //'post_type'=>'',
+                          'order' => 'DES'
+                          ));
+                  ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
             <div class="col s12 item">
               <div class="row">
                 <div class="col s3 l2 bg-secundario l">
-                  <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
+                  <h6 class="white-text" style="text-align:center"><?php the_field('fecha_de_evento');?></h6>
                 </div>
                 <div class="col s7 l8">
-                  <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
+                  <a href="<?php the_permalink()?>"><h class="color-oscuro titulo-item"><?php the_title() ?></h5></a>
                 </div>
               </div>
             </div>
-            <div class="col s12 item">
-              <div class="row">
-                <div class="col s3 l2 bg-secundario l">
-                  <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                </div>
-                <div class="col s7 l8">
-                  <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 item">
-              <div class="row">
-                <div class="col s3 l2 bg-secundario l">
-                  <h5 class="white-text" style="text-align:center">18<br>Dic</h5>
-                </div>
-                <div class="col s7 l8">
-                  <h5 class="color-oscuro titulo-item">Internacionalizacion de docente 1</h5>
-                </div>
-              </div>
-            </div>
+            <?php endwhile; ?>
+                  <!-- post navigation -->
+                  <?php else: ?>
+                  
+                  <!-- no posts found -->
+                  <?php endif; ?>
+                  <?php wp_reset_query(); ?>
+                  <!--LOOP Wordpress Fin-->
+          
             <div class="col s12 item" style="">
               <a class="btn btn-flat color-secundario text-negrita" href="#">Ver más Eventos</a>
             </div>
