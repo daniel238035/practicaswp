@@ -609,7 +609,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s12 item" style="bottom: 8px; position: absolute;">
+            <div class="col s12 item" style="">
               <a class="btn btn-flat color-secundario text-negrita" href="#">Ver más Eventos</a>
             </div>
           </div>
