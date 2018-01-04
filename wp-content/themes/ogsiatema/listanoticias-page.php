@@ -30,17 +30,17 @@ Template Name: Página Noticias
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php the_field( 'portada_de_noticia' ); ?>">
 						</div>
-						<div class="card-content" style="padding:15px!important;">
+						<div class="card-content altura-igual-noticia-contenido-1" style="padding:15px!important;">
 							<div class="row flex-row">
 								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator"><?php the_title() ?></h5>
+									<h5 class="titulo-borde-izquierdo-2 activator altura-igual-noticia-titulo-1"><?php the_title() ?></h5>
 								</div>
 								<div class="col s2">
 									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col s12" style="margin: 8px 0px!important;">
+							<div class="row ">
+								<div class="col s12 " style="margin: 8px 0px!important;">
 									<div class="row">
 											<div class="col s2 flex-row-start">
 												<i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Fecha">event</i>
@@ -90,16 +90,16 @@ Template Name: Página Noticias
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php the_field( 'portada_de_noticia' ); ?>">
 						</div>
-						<div class="card-content" style="padding:15px!important;">
+						<div class="card-content altura-igual-noticia-contenido-2" style="padding:15px!important;">
 							<div class="row flex-row">
 								<div class="col s10">
-									<h5 class="titulo-borde-izquierdo-2 activator"><?php the_title() ?></h5>
+									<h5 class="titulo-borde-izquierdo-2 activator altura-igual-noticia-titulo-2"><?php the_title() ?></h5>
 								</div>
 								<div class="col s2">
 									<span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
 								</div>
 							</div>
-							<div class="row">
+							<div class="row ">
 								<div class="col s12" style="margin: 8px 0px!important;">
 									<div class="row">
 											<div class="col s2 flex-row-start">

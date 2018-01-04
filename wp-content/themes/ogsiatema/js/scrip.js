@@ -129,6 +129,18 @@ $( document ).ready(function(){
     $(document).ready(function () {
       equalHeight($(".altura-igual-convocatoria-contenido"));
     });
+    $(document).ready(function () {
+      equalHeight($(".altura-igual-noticia-titulo-1"));
+    });
+    $(document).ready(function () {
+      equalHeight($(".altura-igual-noticia-contenido-1"));
+    });
+     $(document).ready(function () {
+       equalHeight($(".altura-igual-noticia-titulo-2"));
+     });
+     $(document).ready(function () {
+       equalHeight($(".altura-igual-noticia-contenido-2"));
+     });
 
 
     //Swiper efects

@@ -10,7 +10,7 @@
 			<div class="row seccion" >
 				<div class="col s12 offset-l1 l7">
 					<div class="row">
-						<h4>Nombre del evento</h4>
+						<h4><?php the_title() ?></h4>
 					</div>
 					<div class="row" style="padding-bottom: 5px">
 						<div class="col s12 l6">
@@ -20,7 +20,7 @@
 										Lugar:
 									</div>
 									<div class="col s8">
-										Universidad Nacional Pedro Ruiz Gallo
+										<?php the_field( 'lugar_de_evento' ); ?>
 									</div>
 							</div>
 						</div>
@@ -31,7 +31,7 @@
 										Fecha:
 									</div>
 									<div class="col s8">
-										18 de agosto del 2017
+										<?php the_field( 'fecha_de_evento' ); ?>
 									</div>
 							</div>
 							<div class="row" style="margin: 8px 0px!important;">
@@ -40,55 +40,20 @@
 										Hora:
 									</div>
 									<div class="col s8">
-										5:00 pm
+										<?php the_field( 'hora_de_evento' ); ?>
 									</div>
 							</div>
 						</div>
 						<div class="col s12">
 							<div class="row" style="margin: 15px 0px!important;">
-								<img src="images/portadas/portada3.jpg" class="responsive-img z-depth-1 imagen-evento" style="width: 100%;!important; height:450px!important;">
+								<img src="<?php the_field( 'portada_evento' ); ?>" class="responsive-img z-depth-1 imagen-evento" style="width: 100%;!important; height:450px!important;">
 							</div>
 						</div>
 					</div>
 
 
 					<div class="row" style="padding: 10px 20px 10px 20px!important">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<?php the_field( 'contenido_evento' ); ?>
 					</div>
 				</div>
 				<div class="col s12 l3">
