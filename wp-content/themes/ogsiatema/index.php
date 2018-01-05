@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div class="row portada-secundario portada-2 hide-on-med-and-down">
+    <div id="cooperacion" class="row portada-secundario portada-2 hide-on-med-and-down">
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l6 offset-l1">
@@ -78,7 +78,7 @@
     </div>
 
     <!--MOVILIDAD ESTUDIANTIL Inicio-->
-    <div class="row hide-on-med-and-down portada-secundario portada-4 ">
+    <div id="movilidad" class="row hide-on-med-and-down portada-secundario portada-4 ">
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l4 offset-l1">
@@ -582,7 +582,7 @@
              <!--LOOP Wordpress Inicio-->
              <?php
                         query_posts(array(
-                          "showposts" => 1,
+                          "showposts" => 3,
                           "cat" => 11,
                           //'post_type'=>'',
                           'order' => 'DES'
@@ -596,21 +596,21 @@
                   <h6 class="white-text" style="text-align:center"><?php the_field('fecha_de_evento');?></h6>
                 </div>
                 <div class="col s7 l8">
-                  <a href="<?php the_permalink()?>"><h class="color-oscuro titulo-item"><?php the_title() ?></h5></a>
+                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title() ?></h5></a>
                 </div>
               </div>
             </div>
             <?php endwhile; ?>
-                  <!-- post navigation -->
-                  <?php else: ?>
+            <!-- post navigation -->
+            <?php else: ?>
                   
-                  <!-- no posts found -->
-                  <?php endif; ?>
-                  <?php wp_reset_query(); ?>
-                  <!--LOOP Wordpress Fin-->
+            <!-- no posts found -->
+            <?php endif; ?>
+            <?php wp_reset_query(); ?>
+            <!--LOOP Wordpress Fin-->
           
-            <div class="col s12 item" style="">
-              <a class="btn btn-flat color-secundario text-negrita" href="#">Ver más Eventos</a>
+            <div class="col s12 item" >
+              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 23 ) ?>">Ver más Eventos</a>
             </div>
           </div>
         </div>

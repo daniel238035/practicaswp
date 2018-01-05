@@ -130,16 +130,16 @@
         <div class="menu-fijo hide-on-med-and-down" style="width:100%;">
           <div class="row ">
             <div class=" col s12 l3 bg-primario">
-              <div class="btn-sec-1"></div>
+              <a href="<?php bloginfo(); ?>#cooperacion"><div class="btn-sec-1"></div></a>
             </div>
             <div class="col s12 l3 bg-primario">
-              <div class="btn-sec-2"></div>
+              <a href="<?php the_permalink( 13 ) ?>"><div class="btn-sec-2"></div></a>
             </div>
             <div class="col s12 l3 bg-primario">
-              <div class="btn-sec-3"></div>
+              <a href="<?php the_permalink( 15 ) ?>"><div class="btn-sec-3"></div></a>
             </div>
             <div class="col s12 l3 bg-primario">
-              <div class="btn-sec-4"></div>
+              <a href="<?php the_permalink( 19 ) ?>"><div class="btn-sec-4"></div></a>
             </div>
           </div>
         </div>

@@ -35,60 +35,8 @@
 				<?php the_field( 'contenido_noticia' ); ?>
 			</div>
 		</div>
-		<div class="col s12 l3">
-			<div class="row" style="padding-bottom: 25px">
-				<h5 class="bordes">
-					Ultimas Noticias
-				</h5>
-				<div class="col s12">
-					<h6 class="text-negrita color-primario">28 de noviembre</h6>
-					<p>Titulo de ultima noticia</p>
-				</div>
-				<div class="col s12">
-					<h6 class="text-negrita color-primario">28 de noviembre</h6>
-					<p>Titulo de ultima noticia</p>
-				</div>
-				<div class="col s12">
-					<h6 class="text-negrita color-primario">28 de noviembre</h6>
-					<p>Titulo de ultima noticia</p>
-				</div>
-			</div>
-			<div class="row" >
-				<h5 class="bordes">
-					Ultimos Eventos
-				</h5>
-
-				<div class="col s12 espacioEvento">
-					<div class="col s4 bg-primario">
-						<p  style="text-align:center" class="white-text"><span style="font-size: 20px">18</span><br> Nov</p>
-					</div>
-					<div class="col s8">
-						Universidad Nacional Pedro Ruiz Gallo
-					</div>
-				</div>
-
-
-				<div class="col s12 espacioEvento">
-					<div class="col s4 bg-primario">
-						<p  style="text-align:center" class="white-text"><span style="font-size: 20px">18</span><br> Nov</p>
-					</div>
-					<div class="col s8">
-						Universidad Nacional Pedro Ruiz Gallo
-
-					</div>
-				</div>
-				<div class="col s12 espacioEvento">
-					<div class="col s4 bg-primario">
-						<p  style="text-align:center" class="white-text"><span style="font-size: 20px">18</span><br> Nov</p>
-					</div>
-					<div class="col s8">
-						Universidad Nacional Pedro Ruiz Gallo
-					</div>
-				</div>
-			</div>
-
-
-		</div>
+		
+		<?php get_sidebar('noticias'); ?>
 
 	</div>
 </div>
