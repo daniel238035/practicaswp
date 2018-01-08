@@ -58,8 +58,16 @@
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l6 offset-l1">
-              <h2 class="white-text">COOPERACIÓN TÉCNICA</h2>
-              <p class="white-text">Proveemos asistencia técnica para el establecimiento de acuerdos de cooperación en beneficio de la comunidad universitaria y la región Lambayeque.</p>
+               <!--Llamar Pagina de  Wordpress Inicio-->
+            <?php
+            query_posts('pagename= Cooperacion Tecnica');
+            while (have_posts()) : the_post();
+            ?>
+              <h2 class="white-text"><?php the_title()?></h2>
+              <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+            <!--Llamar Pagina de  Wordpress Fin-->
             </div>
           </div>
       </div>
