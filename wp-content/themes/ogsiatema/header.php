@@ -131,7 +131,7 @@
         <div class="menu-fijo hide-on-med-and-down" style="width:100%;">
           <div class="row ">
             <div class=" col s12 l3 bg-primario">
-              <a href="<?php bloginfo(); ?>#cooperacion"><div class="btn-sec-1"></div></a>
+              <a href="<?php the_permalink( 89 ) ?>#cooperacion"><div class="btn-sec-1"></div></a>
             </div>
             <div class="col s12 l3 bg-primario">
               <a href="<?php the_permalink( 13 ) ?>"><div class="btn-sec-2"></div></a>
