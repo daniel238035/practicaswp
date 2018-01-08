@@ -37,8 +37,6 @@
  <!--Import Swiper JV -->
  <script src="<?php bloginfo('stylesheet_directory');?>/js/swiper.min.js"></script>
 
- <!--SLIKER-->
- <!--script type="text/javascript" src="slick/slick.min.js"></script-->
 
 </body>
 </html>

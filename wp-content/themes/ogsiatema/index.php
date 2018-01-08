@@ -581,14 +581,14 @@
             </div>
              <!--LOOP Wordpress Inicio-->
              <?php
-                        query_posts(array(
-                          "showposts" => 3,
-                          "cat" => 11,
-                          //'post_type'=>'',
-                          'order' => 'DES'
-                          ));
-                  ?>
-                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                query_posts(array(
+                  "showposts" => 3,
+                   "cat" => 11,
+                   //'post_type'=>'',
+                   'order' => 'DES'
+                    ));
+              ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <div class="col s12 item">
               <div class="row">
@@ -623,50 +623,125 @@
           <div class="swiper-wrapper row ">
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s6 l3">
-
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/unprg.png" style="width: 60%;">
                   </div>
-                  <div class="col s6 l9">
-                    <h6 class="white-text">Nuestra Universidad <br> Nacional Pedro Ruiz Gallo</h6>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span></h6>
                     <h5 class="white-text">Cuenta con Convenios con las <br>siguientes Instituciones</h5>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s6 l3">
-
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/sanmarcos.png" style="width: 60%;">
                   </div>
-                  <div class="col s6 l9">
-                    <h6 class="white-text">Nuestra Universidad <br> Nacional Pedro Ruiz Gallo tiene convenio con: </h6>
-                    <h5 class="white-text">Universidad Nacional <br> de Trujillo</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="row">
-                  <div class="col s6 l3">
-
-                  </div>
-                  <div class="col s6 l9">
-                    <h6 class="white-text">Nuestra Universidad <br> Nacional Pedro Ruiz Gallo tiene convenio con: </h6>
-                    <h5 class="white-text">Universidad Nacional <br> de Chimbote</h5>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional Mayor <br> de San Marcos</h5>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s6 l3">
-
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/uni.png" style="width: 60%;">
                   </div>
-                  <div class="col s6 l9">
-                    <h6 class="white-text">Nuestra Universidad <br> Nacional Pedro Ruiz Gallo tiene convenio con: </h6>
-                    <h5 class="white-text">Universidad Nacional <br> de Piura</h5>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional <br> de Ingenieria</h5>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/agrariamolina.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional Agraria<br> La Molina</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/cayetano.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Peruana<br> Cayetano Heredia</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/trujillo.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional<br> de Trujillo</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/piura.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional<br> de Piura</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/cajamarca.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional<br> de Cajamarca</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/catolicatrujillo.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Católica<br> de Trujillo</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/catolicachimbote.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Católica<br> de Chimbote</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col s3 offset-s1 flex-row">
+                    <img src="<?php bloginfo('template_url')?>/images/logos/altiplano.png" style="width: 60%;">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
+                    <h5 class="white-text">Universidad Nacional<br> de Altiplano</h5>
+                  </div>
+                </div>
+              </div>
           </div>
           <!-- Add Arrows -->
           <div class="swiper-button-next"></div>

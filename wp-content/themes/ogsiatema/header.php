@@ -18,6 +18,7 @@
       <!--FONTS IMPORTADOS-->
       <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Viga" rel="stylesheet">
+
       <style>
         .portada-1{
           background: url('<?php bloginfo('template_url')?>/images/portadas/portada1.jpg');
@@ -78,11 +79,11 @@
             <div class="row">
               <div class="col l4 color-oscuro">
                 <span class=" icon-phone" style="font-size:15px;"></span>
-                Telefono
+                (074) 310731
               </div>
               <div class="col l4 color-oscuro">
                 <span class=" icon-envelop" style="font-size:15px;"></span>
-                Correo Electrónico
+                correo
               </div>
               <div class="col l4 color-oscuro">
                 <span class="icon-facebook" style="font-size:15px;"></span>

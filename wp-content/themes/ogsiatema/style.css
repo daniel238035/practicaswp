@@ -57,6 +57,10 @@ Version: 1.0
 	font-weight: bold!important;
 }
 
+.text-justificado{
+  text-align: justify;
+}
+
 .color-primario{
 	color: #0000A8!important;
 }
@@ -251,7 +255,8 @@ Version: 1.0
   color: #fff;
 }
 .btn-sec-2:after, .btn-sec-2:before {
-  content: 'Movilidad Estudiantil';
+  content: 'Programa de Movilidad';
+  text-align: center;
 	font-size: 18px;
   position: absolute;
   left: 50%;
