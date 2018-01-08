@@ -31,95 +31,59 @@ Template Name: Página Cooperacion Tecnica
                 <div class="col s12">
                     <h5>Convenios Nacionales</h5>
                     <div class="row">
-                        <div class="col s12 m4">
-                            <div class="card" style="padding:0px!important;">
-                                <div class="row">
-                                    <div class="col s12 m6 ">
-                                     <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
+                            <?php if( have_rows('lista_archivo_cooperacion') ): ?>
+                            <div class="col s12 m4">
+                              <?php while( have_rows('lista_archivo_cooperacion') ): the_row();
+                                  // variables
+                                  $content_nombre_archivo = get_sub_field('nombre_de_archivo_cooperacion');
+                                  $content_archivo = get_sub_field('archivo_cooperacion');
+                              ?>
+                                <div class="card" style="padding:0px!important;">
+                                    <div class="row">
+                                        <div class="col s12 m6 ">
+                                        <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
 
-                                    </div>
-                                    <div class="col s12 m6" style="margin: 15px 0px">
-                                       <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
+                                        </div>
+                                        <div class="col s12 m6" style="margin: 15px 0px">
+                                        <a class="color-oscuro" href="<?php echo $content_archivo; ?> target="_blank""><h6><?php echo $content_nombre_archivo; ?></h6></a> 
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m4 ">
-                            <div class="card" style="padding:0px!important;">
-                                <div class="row">
-                                    <div class="col s12 m6 ">
-                                     <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
-
-                                    </div>
-                                    <div class="col s12 m6">
-                                       <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
-
+                                        </div>
                                     </div>
                                 </div>
+                                <?php endwhile; ?>
                             </div>
-                        </div>
-                        <div class="col s12 m4">
-                            <div class="card" style="padding:0px!important;">
-                                <div class="row">
-                                    <div class="col s12 m6 ">
-                                     <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
+                        <?php endif; ?>
 
-                                    </div>
-                                    <div class="col s12 m6">
-                                       <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col s12">
                     <h5>Convenios Internacionales</h5>
                     <div class="row">
-                        <div class="col s12 m4">
-                            <div class="card" style="padding:0px!important;">
-                                <div class="row">
-                                    <div class="col s12 m6 ">
-                                     <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
+                            <?php if( have_rows('lista_archivo_cooperacion_internacional') ): ?>
+                            <div class="col s12 m4">
+                              <?php while( have_rows('lista_archivo_cooperacion_internacional') ): the_row();
+                                  // variables
+                                  $content_nombre_archivo = get_sub_field('nombre_de_archivo_cooperacion_internacional');
+                                  $content_archivo = get_sub_field('archivo_cooperacion_internacional');
+                              ?>
+                                <div class="card" style="padding:0px!important;">
+                                    <div class="row">
+                                        <div class="col s12 m6 ">
+                                        <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
 
-                                    </div>
-                                    <div class="col s12 m6">
-                                       <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
+                                        </div>
+                                        <div class="col s12 m6" style="margin: 15px 0px">
+                                        <a class="color-oscuro" href="<?php echo $content_archivo; ?> target="_blank""><h6><?php echo $content_nombre_archivo; ?></h6></a> 
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m4">
-                            <div class="card" style="padding:0px!important;">
-                                <div class="row">
-                                    <div class="col s12 m6 ">
-                                     <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
-
-                                    </div>
-                                    <div class="col s12 m6">
-                                       <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
-
+                                        </div>
                                     </div>
                                 </div>
+                                <?php endwhile; ?>
                             </div>
-                        </div>
-                        <div class="col s12 m4">
-                            <div class="card" style="padding:0px!important;">
-                                <div class="row">
-                                    <div class="col s12 m6 ">
-                                     <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
+                        <?php endif; ?>
 
-                                    </div>
-                                    <div class="col s12 m6">
-                                       <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
