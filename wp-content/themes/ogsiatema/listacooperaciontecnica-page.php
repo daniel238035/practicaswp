@@ -38,7 +38,7 @@ Template Name: Página Cooperacion Tecnica
                                      <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
 
                                     </div>
-                                    <div class="col s12 m6">
+                                    <div class="col s12 m6" style="margin: 15px 0px">
                                        <a class="color-oscuro" href=""><h6>Convenio Alianza del Pacifico</h6></a> 
 
                                     </div>
