@@ -76,8 +76,8 @@ Template Name: Página Movilidad UNPRG Nivel Nacional Alumno
                     </div>
                 </div>
 
-                <div class="col s12 " id="instituciones_elegibles" style="margin:15px 0px!important;">
-                    <h4 class="color-secundario">IES Elegibles</h4>
+                <div class="col s12 hide" id="instituciones_elegibles" style="margin:15px 0px!important;">
+                    <h4 class="color-secundario">Universidades Elegibles</h4>
                     <?php if( have_rows('ies_elegibles') ): ?>
                     <ul class="collection ">
                         <?php while( have_rows('ies_elegibles') ): the_row();
@@ -170,12 +170,12 @@ Template Name: Página Movilidad UNPRG Nivel Nacional Alumno
                         <a href="#beneficios" class="black-text">Beneficios</a>
                     </div>
                 </div>
-                <div class="row" style="margin: 12px 0px!important;">
+                <div class="row hide" style="margin: 12px 0px!important;">
                     <div class="col s2 flex-row-start text-negrita">
                         <i class="material-icons  color-secundario">account_balance</i>
                     </div>
                     <div class="col s10">
-                        <a href="#instituciones_elegibles" class="black-text">IES Eleigles</a>
+                        <a href="#instituciones_elegibles" class="black-text">Universidades Eleigles</a>
                     </div>
                 </div>
                 <div class="row" style="margin: 12px 0px!important;">
@@ -238,42 +238,44 @@ Template Name: Página Movilidad UNPRG Nivel Nacional Alumno
             <div class="row" style="margin: 25px 0px!important;">
                 <h5 class="titulo-borde-izquierdo-2">DOCUMENTOS</h5>
                 <div class="col s12">
-                    <ul class="">
+                    <?php if( have_rows('lista_documentos_convocatoria') ): ?>
+                        <ul class="">
+                      	<?php while( have_rows('lista_documentos_convocatoria') ): the_row();
+                  		    // variables
+                              $content_nombre_documento = get_sub_field('nombre_documento_convocatoria');
+                              $content_archivo_convocatoria = get_sub_field('archivo_documento_convocatoria');
+                  		  ?>
+                        <a href="<?php echo $content_enlace; ?>" class="collection-item black-text" target="_blank"><?php echo $content_universidad; ?></a>
                         <li class="flex-row-start" style="margin:10px 0px!important">
                             <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                            <a href="#" class="black-text">Documento 1</a>
+                            <a href="<?php echo $content_archivo_convocatoria; ?>" class="black-text" target="_blank"><?php echo $content_nombre_documento; ?></a>
                         </li>
-                        <li class="flex-row-start" style="margin:10px 0px!important">
-                            <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                            <a href="#" class="black-text">Documento 1</a>
-                        </li>
-                        <li class="flex-row-start" style="margin:10px 0px!important">
-                            <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                            <a href="#" class="black-text">Documento 1</a>
-                        </li>
+                        <?php endwhile; ?>
+                        </ul>
+                    <?php endif; ?>
 
-                    </ul>
                 </div>
 
             </div>
             <div class="row" style="margin: 25px 0px!important;">
                 <h5 class="titulo-borde-izquierdo-2">RESULTADOS</h5>
                 <div class="col s12">
-                    <ul class="">
+                    <?php if( have_rows('lista_resultados_convocatorias') ): ?>
+                        <ul class="">
+                      	<?php while( have_rows('lista_resultados_convocatorias') ): the_row();
+                  		    // variables
+                              $content_nombre_documento = get_sub_field('nombre_resultados_convocatoria');
+                              $content_archivo_convocatoria = get_sub_field('archivos_resultados_convocatoria');
+                  		  ?>
+                        <a href="<?php echo $content_enlace; ?>" class="collection-item black-text" target="_blank"><?php echo $content_universidad; ?></a>
                         <li class="flex-row-start" style="margin:10px 0px!important">
                             <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                            <a href="#" class="black-text">Resultados 1</a>
+                            <a href="<?php echo $content_archivo_convocatoria; ?>" class="black-text" target="_blank"><?php echo $content_nombre_documento; ?></a>
                         </li>
-                        <li class="flex-row-start" style="margin:10px 0px!important">
-                            <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                            <a href="#" class="black-text">Resultados 1</a>
-                        </li>
-                        <li class="flex-row-start" style="margin:10px 0px!important">
-                            <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                            <a href="#" class="black-text">Resultados 1</a>
-                        </li>
+                        <?php endwhile; ?>
+                        </ul>
+                    <?php endif; ?>
 
-                    </ul>
                 </div>
 
             </div>

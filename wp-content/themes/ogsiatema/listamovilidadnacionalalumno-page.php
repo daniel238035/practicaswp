@@ -6,7 +6,6 @@ Template Name: Página Movilidad Nivel Nacional Alumno
 <?php get_header(); ?> 
 
   <div class="cuerpo">
-
         <div class="parallax-container portada-sub portada-principal-oscuro">
           <div class="parallax">
             <img src="<?php bloginfo('template_url')?>/images/portadas/portada6.jpg">
@@ -22,7 +21,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
             </div>
           </div>
         </div>
-
+        
         <div class="row seccion">
           <div class="col s12 offset-l1 l7">
 
@@ -77,8 +76,8 @@ Template Name: Página Movilidad Nivel Nacional Alumno
                   		    // variables
                               $content_universidad = get_sub_field('universidad_elegible');
                               $content_enlace = get_sub_field('enlace_universidad_elegible');
-                  		?>
-                            <a href="<?php echo $content_enlace; ?>" class="collection-item black-text" target="_blank"><?php echo $content_universidad; ?></a>
+                  		  ?>
+                        <a href="<?php echo $content_enlace; ?>" class="collection-item black-text" target="_blank"><?php echo $content_universidad; ?></a>
                         <?php endwhile; ?>
                         </ul>
                     <?php endif; ?>
@@ -237,8 +236,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
 
             </div>
           </div>
-
         </div>
-</div>
+  </div>
 
 <?php get_footer() ?>
