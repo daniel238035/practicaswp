@@ -210,7 +210,7 @@
           <div class=" col s12 l4 offset-l1">
             <div class="container">
                 <div class=" card card-seccion-2 row white">
-                <div class="swiper-container swiper-container-horizontal  ">
+                <div class="swiper-container swiper-container-horizontal-2  ">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div>
@@ -911,7 +911,7 @@
 
     <div class="row bg-secundario seccion-2" id="convenios">
       <div class="">
-        <div class="swiper-container container swiper-container-h">
+        <div class="swiper-container container swiper-container-horizontal-1">
           <div class="swiper-wrapper row ">
               <div class="swiper-slide">
                 <div class="row">

@@ -145,25 +145,21 @@ $( document ).ready(function(){
 
     //Swiper efects
     
+    
+    
+   var swiperH1 = new Swiper('.swiper-container-horizontal-1', {
+     spaceBetween: 50,
+     pagination: {
+       el: '.swiper-pagination-h',
+       clickable: true,
+     },
+     autoplay: {
+       delay: 3500,
+       disableOnInteraction: false,
+     },
+   });
 
-   var swiper = new Swiper('.swiper-container-h', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination-h',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-    var swiperH2 = new Swiper('.swiper-container-horizontal', {
+    var swiperH2 = new Swiper('.swiper-container-horizontal-2', {
       spaceBetween: 50,
       pagination: {
         el: '.swiper-pagination-h',
