@@ -16,8 +16,7 @@
       <!--Import Swiper -->
        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/swiper.min.css">
       <!--FONTS IMPORTADOS-->
-      <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Viga" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Poppins|Reem+Kufi" rel="stylesheet">
 
       <style>
         .portada-1{
@@ -130,16 +129,16 @@
         <!--HEADER SECUNDARIO-->
         <div class="menu-fijo hide-on-med-and-down" style="width:100%;">
           <div class="row ">
-            <div class=" col s12 l3 bg-primario">
+            <div class=" col s12 l3 bg-secundario">
               <a href="<?php the_permalink( 89 ) ?>#cooperacion"><div class="btn-sec-1"></div></a>
             </div>
-            <div class="col s12 l3 bg-primario">
+            <div class="col s12 l3 bg-secundario">
               <a href="<?php the_permalink( 13 ) ?>"><div class="btn-sec-2"></div></a>
             </div>
-            <div class="col s12 l3 bg-primario">
+            <div class="col s12 l3 bg-secundario">
               <a href="<?php the_permalink( 15 ) ?>"><div class="btn-sec-3"></div></a>
             </div>
-            <div class="col s12 l3 bg-primario">
+            <div class="col s12 l3 bg-secundario">
               <a href="<?php the_permalink( 19 ) ?>"><div class="btn-sec-4"></div></a>
             </div>
           </div>

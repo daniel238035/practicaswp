@@ -16,8 +16,8 @@ Template Name: Página Internacionalización Docente
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l5 offset-l1">
-              <h2 class="white-text"><?php the_title() ?></h2>
-              <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <h2 class="white-text titulo-portada"><?php the_title() ?></h2>
+              <div class="text-justificado white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
             </div>
           </div>
       </div>

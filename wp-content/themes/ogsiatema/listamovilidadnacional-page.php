@@ -16,8 +16,8 @@ Template Name: Página Movilidad Nivel Nacional
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l5 offset-l1">
-              <h2 class="white-text"><?php the_title() ?></h2>
-              <div class="white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <h2 class="white-text titulo-portada"><?php the_title() ?></h2>
+              <div class="text-justificado white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
             </div>
           </div>
       </div>
@@ -37,6 +37,10 @@ Template Name: Página Movilidad Nivel Nacional
         <div id="test-swipe-1" class="col s12 ">
             <div class="container">
                 <div class="row seccion">
+                    <div class="col s12">
+                        <h5>¿Qué es la Red Peruana de Universidades?</h5>
+                        <p class="parrafo-mediano color-oscuro text-justificado">La RPU agrupa a 21 universidades alrededor de todo el país, con el objetivo de promover la integración, el intercambio y la construcción de conocimiento entre universidades. Esto se logra a través de la promoción de programas de movilidad para docentes, estudiantes y administrativos, proyectos de investigación y convenios a nivel regional.</p>
+                    </div>
                     <div class="col s12 l4">
                         <div class="row">
                             <div class="col s12 flex-row">
@@ -49,7 +53,7 @@ Template Name: Página Movilidad Nivel Nacional
                                 while (have_posts()) : the_post();
                                 ?>
                                 <h5 style="text-align: center;"><?php the_title()?></h5>
-                                <div style="text-align: center;" class="altura-igual-1"><?php the_excerpt() ?></div>
+                                <div style="text-align: center;" class="color-oscuro altura-igual-1"><?php the_excerpt() ?></div>
                                 <a class="btn btn-principal text-negrita" href="<?php the_permalink()?>">Más Información</a> 
                                 <?php endwhile; ?>
                                 <?php wp_reset_query(); ?>
@@ -70,7 +74,7 @@ Template Name: Página Movilidad Nivel Nacional
                                 while (have_posts()) : the_post();
                                 ?>
                                 <h5 style="text-align: center;"><?php the_title()?></h5>
-                                <div style="text-align: center;" class="altura-igual-1"><?php the_excerpt() ?></div>
+                                <div style="text-align: center;" class="color-oscuro altura-igual-1"><?php the_excerpt() ?></div>
                                 <a class="btn btn-principal text-negrita" href="<?php the_permalink()?>">Más Información</a> 
                                 <?php endwhile; ?>
                                 <?php wp_reset_query(); ?>
@@ -91,7 +95,7 @@ Template Name: Página Movilidad Nivel Nacional
                                 while (have_posts()) : the_post();
                                 ?>
                                 <h5 style="text-align: center;"><?php the_title()?></h5>
-                                <div style="text-align: center;" class="altura-igual-1"><?php the_excerpt() ?></div>
+                                <div style="text-align: center;" class="color-oscuro altura-igual-1"><?php the_excerpt() ?></div>
                                 <a class="btn btn-principal text-negrita" href="<?php the_permalink()?>">Más Información</a> 
                                 <?php endwhile; ?>
                                 <?php wp_reset_query(); ?>

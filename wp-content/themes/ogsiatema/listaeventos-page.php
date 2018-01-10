@@ -6,11 +6,28 @@ Template Name: Página Eventos
 <?php get_header(); ?> 
 
 <div class="cuerpo">
-		<div class="row" style="margin:0px!important;">
+		<div class="row hide" style="margin:0px!important;">
 			<div class="card-panel bg-secundario centered flex-row" style="margin:0px!important;">
-				<h2 class="white-text"><?php the_title() ?></h2>
+				<h2 class="titulo-portada white-text"><?php the_title() ?></h2>
 			</div>
 		</div>
+
+		<div class="parallax-container  portada-sub portada-principal-oscuro" style="height:200px;">
+			<div class="parallax">
+			<img src="<?php bloginfo('template_url')?>/images/portadas/portada-eventos.jpg">
+
+			</div>
+			<div class="row   ">
+					<div class=" flex seccion-2">
+						<div class="row">
+						<div class="col s12 l5 offset-l2">
+							<h2 class="white-text titulo-portada"><?php the_title() ?></h2>
+						</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		
 		<div class="container seccion">
 			<div class="row" style="margin-bottom: 10px!important" >
 

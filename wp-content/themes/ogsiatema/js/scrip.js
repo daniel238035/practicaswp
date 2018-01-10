@@ -144,18 +144,9 @@ $( document ).ready(function(){
 
 
     //Swiper efects
-    var swiper = new Swiper('.swiper-container', {
-     pagination: {
-       el: '.swiper-pagination',
-       type: 'progressbar',
-     },
-     navigation: {
-       nextEl: '.swiper-button-next',
-       prevEl: '.swiper-button-prev',
-     },
-   });
+    
 
-   var swiper = new Swiper('.swiper-container', {
+   var swiper = new Swiper('.swiper-container-h', {
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {
@@ -163,13 +154,46 @@ $( document ).ready(function(){
         disableOnInteraction: false,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-h',
         clickable: true,
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+    });
+
+    var swiperH2 = new Swiper('.swiper-container-horizontal', {
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination-h',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+
+    var swiperH3 = new Swiper('.swiper-container-horizontal-3', {
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination-h',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+
+    var swiperV = new Swiper('.swiper-container-v', {
+          direction: 'vertical',
+          spaceBetween: 50,
+          pagination: {
+            el: '.swiper-pagination-v',
+            clickable: true,
+          },
     });
 
 })

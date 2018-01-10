@@ -6,15 +6,6 @@ Template Name: Página Movilidad Nivel Nacional Alumno
 <?php get_header(); ?> 
 
   <div class="cuerpo">
-        <!--div class="row portada-sub portada-4 ">
-          <div class="portada-principal-oscuro flex seccion-2">
-              <div class="row">
-                <div class="col s12 l5 offset-l2">
-                  <h2 class="white-text">MOVILIDAD ESTUDIANTIL</h2>
-                </div>
-              </div>
-          </div>
-        </div-->
 
         <div class="parallax-container portada-sub portada-principal-oscuro">
           <div class="parallax">
@@ -25,7 +16,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
             <div class=" flex seccion-2">
                 <div class="row">
                   <div class="col s12 l7 offset-l2">
-                    <h2 class="white-text">Programa de Movilidad</h2>
+                    <h2 class="white-text titulo-portada">Programa de Movilidad</h2>
                   </div>
                 </div>
             </div>
@@ -79,7 +70,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
               </div>
 
               <div class="col s12 " id="instituciones_elegibles" style="margin:15px 0px!important;">
-                <h4 class="color-secundario">IES Elegibles</h4>
+                <h4 class="color-secundario">Universidades Elegibles</h4>
                     <?php if( have_rows('ies_elegibles') ): ?>
                         <ul class="collection ">
                       	<?php while( have_rows('ies_elegibles') ): the_row();
@@ -133,7 +124,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
           </div>
 
           <div class="col s12 l3 barra-lateral">
-            <div class="row" style="margin: 15px 0px!important;">
+            <div class="row hide" style="margin: 15px 0px!important;">
               <div class="col s12">
                 <a class="btn btn-principal text-negrita" href="#" >Postula Aquí</a>
               </div>
@@ -161,7 +152,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
                     <i class="material-icons  color-secundario">account_balance</i>
                   </div>
                   <div class="col s10">
-                    <a href="#instituciones_elegibles" class="black-text">IES Eleigles</a>
+                    <a href="#instituciones_elegibles" class="black-text">Universidades Eleigles</a>
                   </div>
               </div>
               <div class="row" style="margin: 12px 0px!important;">
@@ -221,7 +212,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
                   </div>
               </div>
             </div>
-            <div class="row" style="margin: 25px 0px!important;">
+            <div class="row hide" style="margin: 25px 0px!important;">
               <h5 class="titulo-borde-izquierdo-2">DOCUMENTOS</h5>
               <div class="col s12">
                 <ul class="">
@@ -233,7 +224,7 @@ Template Name: Página Movilidad Nivel Nacional Alumno
               </div>
 
             </div>
-            <div class="row" style="margin: 25px 0px!important;">
+            <div class="row hide" style="margin: 25px 0px!important;">
               <h5 class="titulo-borde-izquierdo-2">RESULTADOS</h5>
               <div class="col s12">
                 <ul class="">

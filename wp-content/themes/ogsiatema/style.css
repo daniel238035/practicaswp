@@ -9,6 +9,11 @@ Version: 1.0
 
 /*ESTILOS GENERALES inicio*/
 
+html{
+  font-family: 'Poppins',
+  sans-serif!important;
+
+}
 
 .row{
 	margin: 0px!important;
@@ -89,12 +94,17 @@ Version: 1.0
 	height:60%;
 }
 
+.parallax-container {
+  height: 400px!important;
+}
+
 .btn-principal{
 	background: #0072BC!important;
 }
 
 .titulo-portada{
-	font-size: 30px;
+  /*font-size: 30px;*/
+  font-family: 'Hammersmith One', sans-serif;
 }
 
 .titulo-borde-izquierdo-1{
@@ -205,7 +215,7 @@ Version: 1.0
 .btn-sec-1 {
   width: 100%;
   height: 60px;
-  background-color: #0000A8;
+  background-color: #0072BC;
   /*position: absolute;*/
   left: 0%;
   top: 0%;
@@ -217,6 +227,7 @@ Version: 1.0
 }
 .btn-sec-1:after, .btn-sec-1:before {
   content: 'Cooperacion Técnica';
+  text-align: center;
 	font-size: 18px;
   position: absolute;
   left: 50%;
@@ -244,7 +255,7 @@ Version: 1.0
 .btn-sec-2 {
   width: 100%;
   height: 60px;
-  background-color: #0000A8;
+  background-color: #0072BC;
   /*position: absolute;*/
   left: 0%;
   top: 0%;
@@ -285,7 +296,7 @@ Version: 1.0
 .btn-sec-3 {
   width: 100%;
   height: 60px;
-  background-color: #0000A8;
+  background-color: #0072BC;
   /*position: absolute;*/
   left: 0%;
   top: 0%;
@@ -328,7 +339,7 @@ Version: 1.0
 .btn-sec-4 {
   width: 100%;
   height: 60px;
-  background-color: #0000A8;
+  background-color: #0072BC;
   /*position: absolute;*/
   left: 0%;
   top: 0%;
@@ -340,6 +351,7 @@ Version: 1.0
 }
 .btn-sec-4:after, .btn-sec-4:before {
   content: 'Otras Convocatorias';
+  text-align: center;
 	font-size: 18px;
   position: absolute;
   left: 50%;
