@@ -108,7 +108,46 @@ Template Name: Página Movilidad Nivel Nacional
 
             </div>
         </div>
-        <div id="test-swipe-2" class="col s12 red">Test 2</div>
+        <div id="test-swipe-2" class="col s12">
+        <<div class="container">
+        
+            <div class="row">
+                <!--LOOP Wordpress Inicio-->
+                <?php
+                      query_posts(array(
+                        "showposts" => 12,
+                        "cat" => 13,
+                        //'post_type'=>'',
+                        'order' => 'DES'
+                        ));
+                ?>
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <div class="col s12 m4">
+                    <div class="card" style="padding:0px!important;">
+                        <div class="row">
+                            <div class="col s12 m6 ">
+                            <img class="activator" src="<?php the_field( 'imagen_universidad' ); ?>">
+
+                            </div>
+                            <div class="col s12 m6" style="margin: 15px 0px">
+                            <a class="color-oscuro" href="<?php the_field( 'enlace_universidad' ); ?>" target="_blank"><h6><?php the_title() ?></h6></a> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <?php endwhile; ?>
+                <!-- post navigation -->
+                <?php else: ?>
+                <!-- no posts found -->
+                <?php endif; ?>
+                <?php wp_reset_query(); ?>
+                <!--LOOP Wordpress Fin-->
+
+             </div>
+            </div>
+        </div>
     </div>
 
     
