@@ -15,7 +15,7 @@ Template Name: Página Movilidad
     <div class="row portada-secundario  ">
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
-            <div class="col s12 l5 offset-l1">
+            <div class="col s12 l6 offset-l1">
               <h2 class="white-text titulo-portada"><?php the_title() ?></h2>
               <div class="text-justificado white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
             </div>
