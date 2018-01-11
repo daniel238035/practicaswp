@@ -59,7 +59,7 @@
       <div class="portada-principal-oscuro flex seccion-2">
           <div class="row">
             <div class="col s12 l6 offset-l1">
-               <!--Llamar Pagina de  Wordpress Inicio-->
+            <!--Llamar Pagina de  Wordpress Inicio-->
             <?php
             query_posts('pagename= Cooperacion Tecnica');
             while (have_posts()) : the_post();
@@ -112,7 +112,7 @@
                                 <?php endwhile; else : endif ?>
                                 
                                 <!--REPETIDOR DE ARCHIVOS COOPERACION NACIONAL fin -->
-                      </div>
+                            </div>
                             
 
                             <div class="col s12 item">
@@ -127,8 +127,8 @@
                             </div>
 
                             <div class="row">
-                              <!--REPETIDOR DE ARCHIVOS COOPERACION INTERNACNIONAL inicio -->
-                              <?php if( have_rows('lista_archivo_cooperacion_internacional') ):  $i = 0;?>
+
+                                <?php if( have_rows('lista_archivo_cooperacion_internacional') ):  $i = 0;?>
                               
                                 <?php while( have_rows('lista_archivo_cooperacion_internacional') ): the_row();
                                     // variables
@@ -154,7 +154,7 @@
                                 </div>
                               
                                 <?php endwhile; else : endif ?>
-                              <!--REPETIDOR DE ARCHIVOS COOPERACION INTERNACNIONAL fin -->
+
                           
                       </div>
 
