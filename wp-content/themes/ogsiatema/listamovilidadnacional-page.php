@@ -125,11 +125,11 @@ Template Name: Página Movilidad Nivel Nacional
                 <div class="col s12 m4">
                     <div class="card" style="padding:0px!important;">
                         <div class="row">
-                            <div class="col s12 m6 ">
+                            <div class="col s12 m4 ">
                             <img class="activator" src="<?php the_field( 'imagen_universidad' ); ?>">
 
                             </div>
-                            <div class="col s12 m6" style="margin: 15px 0px">
+                            <div class="col s12 m8" style="margin: 15px 0px">
                             <a class="color-oscuro" href="<?php the_field( 'enlace_universidad' ); ?>" target="_blank"><h6><?php the_title() ?></h6></a> 
 
                             </div>

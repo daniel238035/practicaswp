@@ -2,18 +2,23 @@
      <div class="container">
        <div class="row">
          <div class="col l4 s12">
-           <h5 class="white-text">CONTACTATE CON NOSOTROS</h5>
-           <p class="color-oscuro titulo-item ">Direccíón: Av.Balta 123</p>
-           <p class="color-oscuro titulo-item ">Teleéfono: 074-235689</p>
-           <p class="color-oscuro titulo-item ">Correo: agencia@gmail.com</p>
+           <a href="http://www.unprg.edu.pe/univ/"><h5 class="white-text" >Universidad Nacional Pedro Ruiz Gallo</h5></a>
+           <div class="row">
+           <a class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/admision/">Admision</a>
+           <a class="color-oscuro titulo-item  col s12" href="http://www.unprg.edu.pe/univ/portal/">Pregrado</a>
+           <a class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/postgrado/">Postgrado</a>
+           <a class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/univ/resultadoscpu/">Centro Pre</a>
+           </div>
+           
          </div>
          <div class="col l4 s12 center hide-on-med-and-down ">
+          <h5 class="white-text">UBÍCANOS</h5>
            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.5075712598714!2d-79.90641178552958!3d-6.707735367445322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ced9307db00dd%3A0xd82bb63ce69b1c52!2sUniversidad+Nacional+Pedro+Ru%C3%ADz+Gallo!5e0!3m2!1ses!2spe!4v1513137581810" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
          </div>
          <div class="col l4 s12">
-           <h5 class="white-text">HOJA INFORMATIVA</h5>
+           <h5 class="white-text">CONTACTANOS</h5>
            <div class="row lista-redes-footer">
-            <p class="color-oscuro  titulo-item">Ingrese su correo electrónico y le enviaremos más información</p>
+            <p class="color-oscuro  titulo-item">Direccion: </p>
            </div>
          </div>
        </div>
