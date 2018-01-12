@@ -32,7 +32,7 @@ Template Name: Página Contáctanos
 									<i class="material-icons tooltipped color-secundario" data-position="left">room</i>
 								</div>
 								<div class="col s10">
-                  <span class="text-negrita">Direccíón:</span> Av.Balta 123
+                  <span class="text-negrita">Direccíón:</span> Calle Juan Fanning 134 Lambayeque
 								</div>
 					</div>
           <div class="row" style="margin: 10px 0px!important;">
@@ -40,7 +40,7 @@ Template Name: Página Contáctanos
 									<i class="material-icons tooltipped color-secundario" data-position="left">settings_phone</i>
 								</div>
 								<div class="col s10">
-                  <span class="text-negrita">Teléfono:</span> 074-235689
+                  <span class="text-negrita">Teléfono:</span> 074-310731
 								</div>
 					</div>
           <div class="row" style="margin: 10px 0px!important;">
@@ -48,7 +48,7 @@ Template Name: Página Contáctanos
 									<i class="material-icons tooltipped color-secundario" data-position="left">email</i>
 								</div>
 								<div class="col s10">
-                  <span class="text-negrita">Correo Electrónico:</span> agencia@gmail.com
+                  <span class="text-negrita">Correo Electrónico:</span> relacionesnacionaleseinternacionales@unprg.edu.pe
 								</div>
           </div>
           <div class="row" style="margin: 10px 0px!important;">

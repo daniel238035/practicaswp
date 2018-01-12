@@ -18,7 +18,9 @@
          <div class="col l4 s12">
            <h5 class="white-text">CONTACTANOS</h5>
            <div class="row lista-redes-footer">
-            <p class="color-oscuro  titulo-item">Direccion: </p>
+            <p class="color-oscuro  titulo-item">Direccion: Calle Juan Fanning 134 Lambayeque </p>
+            <p class="color-oscuro  titulo-item">Teléfono: 074-310731 </p>
+            <p class="color-oscuro  titulo-item">Correo: relacionesnacionaleseinternacionales@unprg.edu.pe </p>
            </div>
          </div>
        </div>
