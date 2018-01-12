@@ -26,7 +26,7 @@
               <div class="row">
                 <div class="col s12 l8">
                   <h2 class="white-text titulo-portada">Bienvenidos</h2>
-                  <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="white-text">Te damos la mas cordial bienvenida a nuestra pagina web. Agradecemos el interés por conocer mejor los servicios que brindamos.</p>
                 </div>
               </div>
             </div>
