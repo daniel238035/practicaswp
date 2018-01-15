@@ -68,7 +68,7 @@ $( document ).ready(function(){
     $(".height-total").css({"height":$(window).height()+"px"});
 
   //SCROOL LENTO
-  // Select all links with hashes
+  /* Select all links with hashes
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
@@ -103,7 +103,7 @@ $( document ).ready(function(){
           });
         }
       }
-    });
+    });*/
 
     //MISMA ALTURA
     function equalHeight(group) {
