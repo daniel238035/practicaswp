@@ -83,11 +83,29 @@ Template Name: Página Internacionalización Docente
                               </div>
                           </div>
                         </div>
+                        <div class="col s12" style="margin: 8px 0px!important;">
+                          <div class="row">
+                              <div class="col s2 flex-row-start">
+                                <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Duración">mail</i>
+                              </div>
+                              <div class="col s10">
+                                <?php the_field( 'enlace_descripcion' ); ?>
+                              </div>
+                          </div>
+                        </div>
                       </div>
 
                     </div>
                     <div class="card-action" style="padding: 5px 5px!important">
-                      <a class="btn btn-flat green-text text-negrita" href="<?php the_permalink() ?>" >Inscríbete</a>
+                       <div class="row">
+                          <div class="col s12 m5">
+                            <a class="btn btn-flat green-text text-negrita tamaño-pequeño" href="<?php the_permalink() ?>" >Inscríbete</a>
+                          </div>
+                          <div class="col s12 m5">
+                              <a class="btn btn-flat green-text text-negrita tamaño-pequeño" href="<?php the_permalink() ?>" >Formulario</a>
+                          </div>
+                      </div>
+                      
                     </div>
                     <div class="card-reveal">
                       <span class="card-title grey-text text-darken-4"><?php the_title() ?><i class="material-icons right">close</i></span>
