@@ -4,10 +4,10 @@
          <div class="col l4 s12">
            <a href="http://www.unprg.edu.pe/univ/"><h5 class="white-text" >Universidad Nacional Pedro Ruiz Gallo</h5></a>
            <div class="row">
-           <a class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/admision/">Admision</a>
-           <a class="color-oscuro titulo-item  col s12" href="http://www.unprg.edu.pe/univ/portal/">Pregrado</a>
-           <a class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/postgrado/">Postgrado</a>
-           <a class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/univ/resultadoscpu/">Centro Pre</a>
+           <a   target="_black" class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/admision/">Admision</a>
+           <a target="_black" class="color-oscuro titulo-item  col s12" href="http://www.unprg.edu.pe/univ/portal/">Pregrado</a>
+           <a target="_black" class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/postgrado/">Postgrado</a>
+           <a target="_black" class="color-oscuro titulo-item col s12" href="http://www.unprg.edu.pe/univ/resultadoscpu/">Centro Pre</a>
            </div>
            
          </div>
