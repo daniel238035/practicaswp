@@ -14,10 +14,11 @@ Template Name: Página Cooperacion Tecnica
     </div>
     <div class="row portada-secundario ">
       <div class="portada-principal-oscuro flex seccion-2">
-          <div class="row">
+          <div class="row" style="width:100%;">
             <div class="col s12 l5 offset-l1">
               <h2 class="white-text titulo-portada"><?php the_title() ?></h2>
-              <div class="text-justificado white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?></div>
+              <div class="text-justificado white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?>
+              </div>
             </div>
           </div>
       </div>

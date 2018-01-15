@@ -109,7 +109,7 @@ Template Name: Página Movilidad Nivel Nacional
             </div>
         </div>
         <div id="test-swipe-2" class="col s12">
-        <<div class="container seccion">
+         <div class="container seccion">
         
             <div class="row">
                 <!--LOOP Wordpress Inicio-->
