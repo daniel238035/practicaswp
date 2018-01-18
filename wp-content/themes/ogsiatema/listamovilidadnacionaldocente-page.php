@@ -28,6 +28,7 @@ Template Name: Página Movilidad Nivel Nacional Docente
           <div class="col s12 offset-l1 l7">
 
             <div class="row">
+              <h5 class="text-negrita color-secundario">Red Peruana de Universidades</h5>
               <h4 class="text-negrita"><?php the_title()?></h4>
             </div>
 
@@ -116,10 +117,7 @@ Template Name: Página Movilidad Nivel Nacional Docente
                 <div class="text-justificado"><?php the_field( 'documentos_obligatorios' ); ?></div>
               </div>
 
-              <div class="col s12 " id="bases" style="margin:15px 0px!important;">
-                <h4 class="color-secundario">Bases y Modificaciones</h4>
-                <div class="text-justificado"><?php the_field( 'bases_y_modificaciones' ); ?></div>
-              </div>
+              
 
             </div>
           </div>
@@ -204,7 +202,7 @@ Template Name: Página Movilidad Nivel Nacional Docente
                     <a href="#documentacion" class="black-text">Documentación Obligatorios</a>
                   </div>
               </div>
-              <div class="row" style="margin: 12px 0px!important;">
+              <div class="row hide" style="margin: 12px 0px!important;">
                   <div class="col s2 flex-row-start text-negrita">
                     <i class="material-icons  color-secundario">class</i>
                   </div>
@@ -213,16 +211,26 @@ Template Name: Página Movilidad Nivel Nacional Docente
                   </div>
               </div>
             </div>
-            <div class="row hide" style="margin: 25px 0px!important;">
-              <h5 class="titulo-borde-izquierdo-2">DOCUMENTOS</h5>
-              <div class="col s12">
-                <ul class="">
-                  <li class="flex-row-start" style="margin:10px 0px!important"><i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i><a href="#" class="black-text">Documento 1</a></li>
-                  <li class="flex-row-start" style="margin:10px 0px!important"><i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i><a href="#" class="black-text">Documento 1</a></li>
-                  <li class="flex-row-start" style="margin:10px 0px!important"><i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i><a href="#" class="black-text">Documento 1</a></li>
+            <div class="row" style="margin: 25px 0px!important;">
+                <h5 class="titulo-borde-izquierdo-2">BASES Y MODIFICACIONES</h5>
+                <div class="col s12">
+                    <?php if( have_rows('bases_y_modificaciones') ): ?>
+                        <ul class="">
+                      	<?php while( have_rows('bases_y_modificaciones') ): the_row();
+                  		    // variables
+                              $content_nombre_documento = get_sub_field('nombre_base');
+                              $content_archivo_convocatoria = get_sub_field('documento_base');
+                  		  ?>
+                        
+                        <li class="flex-row-start" style="margin:10px 0px!important">
+                            <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
+                            <a href="<?php echo $content_archivo_convocatoria; ?>" class="black-text" target="_blank"><?php echo $content_nombre_documento; ?></a>
+                        </li>
+                        <?php endwhile; ?>
+                        </ul>
+                    <?php endif; ?>
 
-                </ul>
-              </div>
+                </div>
 
             </div>
             <div class="row hide" style="margin: 25px 0px!important;">

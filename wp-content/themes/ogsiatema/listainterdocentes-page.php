@@ -41,14 +41,14 @@ Template Name: Página Internacionalización Docente
                 <div class="col s12 m4">
                   <div class="card" style="padding:0px!important;">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="<?php the_field( 'imagen_de_portada_convocatoria' ); ?>">
+                      <img class="activator" src="<?php the_field( 'imagen_convocatoria' ); ?>">
                     </div>
                     <div class="card-content" style="padding:15px!important;">
                       <div class="row flex-row">
-                        <div class="col s10">
+                        <div class="col s12">
                           <h5 class="titulo-borde-izquierdo-2 activator altura-igual-convocatoria-titulo"><?php the_title() ?></h5>
                         </div>
-                        <div class="col s2">
+                        <div class="col s2 hide">
                           <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
                         </div>
                       </div>
@@ -59,7 +59,7 @@ Template Name: Página Internacionalización Docente
                                 <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Institución">place</i>
                               </div>
                               <div class="col s10">
-                              <?php the_field( 'institucion' ); ?>
+                              <?php the_field( 'institucion_convocatoria' ); ?>
                               </div>
                           </div>
                         </div>
@@ -69,7 +69,7 @@ Template Name: Página Internacionalización Docente
                                 <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Inicio">event</i>
                               </div>
                               <div class="col s10">
-                               <?php the_field( 'inicio_de_convocatoria' ); ?>
+                               <?php the_field( 'inicio_convocatoria' ); ?>
                               </div>
                           </div>
                         </div>
@@ -79,7 +79,7 @@ Template Name: Página Internacionalización Docente
                                 <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Duración">date_range</i>
                               </div>
                               <div class="col s10">
-                                <?php the_field( 'duracion_de_convocatoria' ); ?>
+                                <?php the_field( 'duracion_convocatoria' ); ?>
                               </div>
                           </div>
                         </div>
@@ -89,7 +89,7 @@ Template Name: Página Internacionalización Docente
                                 <i class="material-icons tooltipped color-secundario" data-position="left" data-delay="50" data-tooltip="Duración">mail</i>
                               </div>
                               <div class="col s10">
-                                <?php the_field( 'enlace_descripcion' ); ?>
+                                <?php the_field( 'correo_para_mas_informacion' ); ?>
                               </div>
                           </div>
                         </div>
@@ -99,10 +99,10 @@ Template Name: Página Internacionalización Docente
                     <div class="card-action" style="padding: 5px 5px!important">
                        <div class="row">
                           <div class="col s12 m5">
-                            <a class="btn btn-flat green-text text-negrita tamaño-pequeño" href="<?php the_permalink() ?>" >Inscríbete</a>
+                            <a class="btn btn-flat green-text text-negrita tamaño-pequeño" href="<?php the_field( 'enlace_convocatoria' ); ?>" >Inscríbete</a>
                           </div>
                           <div class="col s12 m5">
-                              <a class="btn btn-flat green-text text-negrita tamaño-pequeño" href="<?php the_permalink() ?>" >Formulario</a>
+                              <a class="btn btn-flat green-text text-negrita tamaño-pequeño" href="<?php the_field( 'formulario_convocatoria' ); ?>" >Formulario</a>
                           </div>
                       </div>
                       

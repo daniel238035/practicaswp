@@ -31,7 +31,10 @@
               </div>
             </div>
           </div>
+          
+
       </div>
+      
     </div>
 
     <div class="row white seccion" id="nosotros">
@@ -210,171 +213,140 @@
           <div class=" col s12 l4 offset-l1">
             <div class="container">
                 <div class=" card card-seccion-2 row white">
-                <div class="swiper-container swiper-container-horizontal-2  ">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div>
-                        <div class="col s12 ">
-                            <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
+                  <div class="swiper-container swiper-container-horizontal-2  ">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div>
+                          <div class="col s12 ">
+                              <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
                           </div>
 
-                          <!--LOOP Wordpress Inicio-->
-                          <?php
-                                query_posts(array(
-                                  "showposts" => 3,
-                                  "cat" => 4,
-                                  //'post_type'=>'',
-                                  'order' => 'DES'
-                                  ));
-                          ?>
-                          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                          
-                          <div class="col s12 item">
-                            <div class="row">
-                              <div class="col s3 bg-secundario l">
-                                <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
-                              </div>
-                              <div class="col s8">
-                                <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                            <!--LOOP Wordpress Inicio-->
+
+                            <!--Llamar Pagina de  Wordpress Inicio-->
+                            <?php
+                            query_posts('pagename=Movilidad Nacional Alumno');
+                            while (have_posts()) : the_post();
+                            ?>
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
                               </div>
                             </div>
-                          </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--Llamar Pagina de  Wordpress Fin-->
 
-                          <?php endwhile; ?>
-                          <!-- post navigation -->
-                          <?php else: ?>
-                          <!-- no posts found -->
-                          <div class="col s12 item">
-                            <div class="row">
-                              <div class="col s4 bg-secundario l">
-                                <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
-                              </div>
-                              <div class="col s7">
-                                <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
+                            <!--Llamar Pagina de  Wordpress Inicio-->
+                            <?php
+                            query_posts('pagename=Movilidad Nacional Docente');
+                            while (have_posts()) : the_post();
+                            ?>
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <?php endif; ?>
-                          <?php wp_reset_query(); ?>
-                          <!--LOOP Wordpress Fin-->
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--Llamar Pagina de  Wordpress Fin-->
 
-                          <div class="col s12 item">
-                            <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
-                          </div>
+                            <!--Llamar Pagina de  Wordpress Inicio-->
+                            <?php
+                            query_posts('pagename=Movilidad Nacional Administrativo');
+                            while (have_posts()) : the_post();
+                            ?>
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
+                              </div>
+                            </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--Llamar Pagina de  Wordpress Fin-->
+
+                            <!--LOOP Wordpress Fin-->
+
+                            <div class="col s12 item">
+                              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 110 ) ?>">Ver más</a>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER OCULTO POR EL MOMENTO -->
+                      <div class=" hide swiper-slide">
+                        <div>
+                          <div class="col s12 ">
+                              <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
+                            </div>
+
+                            <!--LOOP Wordpress Inicio-->
+                            <?php
+                                  query_posts(array(
+                                    "showposts" => 3,
+                                    "cat" => 4,
+                                    //'post_type'=>'',
+                                    'order' => 'DES'
+                                    ));
+                            ?>
+                            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <?php endwhile; ?>
+                            <!-- post navigation -->
+                            <?php else: ?>
+                            <!-- no posts found -->
+                            <div class="col s12 item">
+                              <div class="row">
+                                <div class="col s4 bg-secundario l">
+                                  <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
+                                </div>
+                                <div class="col s7">
+                                  <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
+                                </div>
+                              </div>
+                            </div>
+                            <?php endif; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--LOOP Wordpress Fin-->
+
+                            <div class="col s12 item">
+                              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
+                            </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div>
-                        <div class="col s12 ">
-                            <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
-                          </div>
-
-                          <!--LOOP Wordpress Inicio-->
-                          <?php
-                                query_posts(array(
-                                  "showposts" => 3,
-                                  "cat" => 4,
-                                  //'post_type'=>'',
-                                  'order' => 'DES'
-                                  ));
-                          ?>
-                          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                          
-                          <div class="col s12 item">
-                            <div class="row">
-                              <div class="col s3 bg-secundario l">
-                                <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
-                              </div>
-                              <div class="col s8">
-                                <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
-                              </div>
-                            </div>
-                          </div>
-
-                          <?php endwhile; ?>
-                          <!-- post navigation -->
-                          <?php else: ?>
-                          <!-- no posts found -->
-                          <div class="col s12 item">
-                            <div class="row">
-                              <div class="col s4 bg-secundario l">
-                                <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
-                              </div>
-                              <div class="col s7">
-                                <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
-                              </div>
-                            </div>
-                          </div>
-                          <?php endif; ?>
-                          <?php wp_reset_query(); ?>
-                          <!--LOOP Wordpress Fin-->
-
-                          <div class="col s12 item">
-                            <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
-                          </div>
-                      </div>
-                    </div>
+                    <div class="swiper-pagination swiper-pagination-v"></div>
                   </div>
-                  <div class="swiper-pagination swiper-pagination-v"></div>
-                </div>
               </div>
             </div>
           </div>
 
-            <div class="hide col s12 l4 offset-l1">
-              <div class="container">
-                <div class=" card card-seccion-2 row white">
-                  <div class="col s12 ">
-                    <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
-                  </div>
-
-                  <!--LOOP Wordpress Inicio-->
-                  <?php
-                        query_posts(array(
-                          "showposts" => 3,
-                          "cat" => 4,
-                          //'post_type'=>'',
-                          'order' => 'DES'
-                          ));
-                  ?>
-                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                  
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
-                      </div>
-                      <div class="col s8">
-                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <?php endwhile; ?>
-                  <!-- post navigation -->
-                  <?php else: ?>
-                  <!-- no posts found -->
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s4 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
-                      </div>
-                      <div class="col s7">
-                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <?php endif; ?>
-                  <?php wp_reset_query(); ?>
-                  <!--LOOP Wordpress Fin-->
-
-                  <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
+          
             <div class="col s12 l5 offset-l1">
 
             <!--Llamar Pagina de  Wordpress Inicio-->
@@ -415,50 +387,74 @@
               <div class="container">
                 <div class=" card card-seccion-2 row white">
                   <div class="col s12 ">
-                    <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes</h5>
-                  </div>
+                              <h5 class="titulo-borde-izquierdo-2">Convocatorias Vigentes en UNPRG</h5>
+                          </div>
 
-                  <!--LOOP Wordpress Inicio-->
-                  <?php
-                        query_posts(array(
-                          "showposts" => 3,
-                          "cat" => 4,
-                          //'post_type'=>'',
-                          'order' => 'DES'
-                          ));
-                  ?>
-                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s3 bg-secundario l">
-                        <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
-                      </div>
-                      <div class="col s8">
-                        <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
-                      </div>
-                    </div>
-                  </div>
-                  <?php endwhile; ?>
-                  <!-- post navigation -->
-                  <?php else: ?>
-                  <!-- no posts found -->
-                  <div class="col s12 item">
-                    <div class="row">
-                      <div class="col s4 bg-secundario l">
-                        <h5 class="white-text" style="text-align:center">Muy<br>Pronto</h5>
-                      </div>
-                      <div class="col s7">
-                        <h5 class="color-oscuro titulo-item">Nuevas Convotarias</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <?php endif; ?>
-                  <?php wp_reset_query(); ?>
-                  <!--LOOP Wordpress Fin-->
-                  
-                  <div class="col s12 item">
-                    <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 13 ) ?>">Ver más</a>
-                  </div>
+                            <!--LOOP Wordpress Inicio-->
+
+                            <!--Llamar Pagina de  Wordpress Inicio-->
+                            <?php
+                            query_posts('pagename=Movilidad Nacional Alumno');
+                            while (have_posts()) : the_post();
+                            ?>
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
+                              </div>
+                            </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--Llamar Pagina de  Wordpress Fin-->
+
+                            <!--Llamar Pagina de  Wordpress Inicio-->
+                            <?php
+                            query_posts('pagename=Movilidad Nacional Docente');
+                            while (have_posts()) : the_post();
+                            ?>
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
+                              </div>
+                            </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--Llamar Pagina de  Wordpress Fin-->
+
+                            <!--Llamar Pagina de  Wordpress Inicio-->
+                            <?php
+                            query_posts('pagename=Movilidad Nacional Administrativo');
+                            while (have_posts()) : the_post();
+                            ?>
+                            <div class="col s12 item">
+                              <div class="row flex-row">
+                                <div class="col s3 bg-secundario l">
+                                  <h6 class="white-text text-justificado" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
+                                </div>
+                                <div class="col s8">
+                                  <a href="<?php the_permalink()?>"><h5 class="color-oscuro titulo-item"><?php the_title()?></h5></a>
+                                </div>
+                              </div>
+                            </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
+                            <!--Llamar Pagina de  Wordpress Fin-->
+
+                            <!--LOOP Wordpress Fin-->
+
+                            <div class="col s12 item">
+                              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 110 ) ?>">Ver más</a>
+                            </div>
+
                 </div>
               </div>
             </div>
@@ -556,7 +552,7 @@
                   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                   
                   <div class="col s12 item">
-                    <div class="row">
+                    <div class="row flex-row">
                       <div class="col s3 bg-secundario l">
                         <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
@@ -630,7 +626,7 @@
                   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                   <div class="col s12 item">
-                    <div class="row">
+                    <div class="row flex-row">
                       <div class="col s3 bg-secundario l">
                         <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
@@ -779,7 +775,7 @@
                   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                   <div class="col s12 item">
-                    <div class="row">
+                    <div class="row flex-row">
                       <div class="col s3 bg-secundario l">
                         <h6 class="white-text" style="text-align:center"><?php the_field( 'inicio_de_convocatoria' ); ?></h6>
                       </div>
@@ -883,7 +879,7 @@
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <div class="col s12 item">
-              <div class="row">
+              <div class="row flex-row">
                 <div class="col s3 l2 bg-secundario l">
                   <h6 class="white-text" style="text-align:center"><?php the_field('fecha_de_evento');?></h6>
                 </div>
@@ -915,10 +911,10 @@
           <div class="swiper-wrapper row ">
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/unprg.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span></h6>
                     <h5 class="white-text">Cuenta con Convenios con las <br>siguientes Instituciones</h5>
                   </div>
@@ -926,10 +922,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/sanmarcos.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional Mayor <br> de San Marcos</h5>
                   </div>
@@ -937,10 +933,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/uni.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional <br> de Ingenieria</h5>
                   </div>
@@ -948,10 +944,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/agrariamolina.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional Agraria<br> La Molina</h5>
                   </div>
@@ -959,10 +955,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/cayetano.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Peruana<br> Cayetano Heredia</h5>
                   </div>
@@ -970,10 +966,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/trujillo.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional<br> de Trujillo</h5>
                   </div>
@@ -981,10 +977,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/piura.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional<br> de Piura</h5>
                   </div>
@@ -992,10 +988,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/cajamarca.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional<br> de Cajamarca</h5>
                   </div>
@@ -1003,10 +999,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/catolicatrujillo.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Católica<br> de Trujillo</h5>
                   </div>
@@ -1014,10 +1010,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/catolicachimbote.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Católica<br> de Chimbote</h5>
                   </div>
@@ -1025,10 +1021,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col s3 offset-s1 flex-row">
+                  <div class="hide-on-med-and-down col l3 offset-s1 flex-row">
                     <img src="<?php bloginfo('template_url')?>/images/logos/altiplano.png" style="width: 60%;">
                   </div>
-                  <div class="col s8">
+                  <div class="col s10 offset-s1 l8">
                     <h6 class="white-text">Nuestra <span class="text-negrita"> Universidad <br> Nacional Pedro Ruiz Gallo</span> tiene convenio con: </h6>
                     <h5 class="white-text">Universidad Nacional<br> de Altiplano</h5>
                   </div>

@@ -48,7 +48,7 @@ Template Name: Página Contáctanos
 									<i class="material-icons tooltipped color-secundario" data-position="left">email</i>
 								</div>
 								<div class="col s10">
-                  <span class="text-negrita">Correo Electrónico:</span> relacionesnacionaleseinternacionales@unprg.edu.pe
+                  <span class="text-negrita">Correo Electrónico:</span> relacionesnacionaleseinternacionales <br> @unprg.edu.pe
 								</div>
           </div>
           <div class="row" style="margin: 10px 0px!important;">

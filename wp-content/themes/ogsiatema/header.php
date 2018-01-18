@@ -71,22 +71,23 @@
     <body class="">
       <header class="header">
         <div class="row white menu-superior hide-on-med-and-down">
-          <div class="col s12 l7 men-sup-izquierda white">
-            <p class="color-oscuro" style="margin:2px;">Bienvenidos a la <a href="http://www.unprg.edu.pe" class="color-oscuro" style="text-decoration:none;">Universidad Nacional Pedro Ruiz Gallo</a> </p>
+          <div class="col s12 l6 men-sup-izquierda white">
+            <p class="color-oscuro" style="margin:2px;">Bienvenidos a la <a href="http://www.unprg.edu.pe" class="color-secundario text-negrita" style="text-decoration:none;">Universidad Nacional Pedro Ruiz Gallo</a> </p>
           </div>
-          <div class="col s12 l5 men-sup-derecha white">
-            <div class="row">
-              <div class="col l4 color-oscuro">
-                <span class=" icon-phone" style="font-size:15px;"></span>
+          <div class="col s12 l6 men-sup-derecha white">
+            <div class="row right-align">
+              <div class="col l3 color-oscuro" style="font-size: 13px;">
+                <span class=" icon-phone color-secundario" style="font-size:15px;"></span>
                 (074) 310731
               </div>
-              <div class="col l4 color-oscuro">
-                <span class=" icon-envelop" style="font-size:15px;"></span>
-                correo
+              <div class=" col l7 color-oscuro" style="font-size: 13px;">
+                <span class=" icon-envelop color-secundario" style="font-size:15px;"></span>
+                relacionesnacionaleseinternacionales@unprg.edu.pe
               </div>
-              <div class="col l4 color-oscuro">
-                <span class="icon-facebook" style="font-size:15px;"></span>
-                Redes Sociales
+              <div class="col l2 color-oscuro left-align" style="font-size: 13px;">
+                <a class="color-oscuro" href="https://www.facebook.com/CTRIUNPRG/" target="_black">
+                  <span class="icon-facebook color-secundario" style="font-size:15px;"></span>
+                </a>
               </div>
             </div>
           </div>
@@ -130,16 +131,16 @@
         <div class="menu-fijo hide-on-med-and-down" style="width:100%;">
           <div class="row ">
             <div class=" col s12 l3 bg-secundario">
-              <a href="<?php the_permalink( 89 ) ?>#cooperacion"><div class="btn-sec-1"></div></a>
+              <a href="<?php the_permalink( 89 ) ?>"><div class="btn-sec-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Aqui puedes descargar los Convenios Nacionales e Internacionales"></div></a>
             </div>
             <div class="col s12 l3 bg-secundario">
-              <a href="<?php the_permalink( 13 ) ?>"><div class="btn-sec-2"></div></a>
+              <a href="<?php the_permalink( 13 ) ?>"><div class="btn-sec-2 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Estudia un semestre en otra Universidad"></div></a>
             </div>
             <div class="col s12 l3 bg-secundario">
-              <a href="<?php the_permalink( 15 ) ?>"><div class="btn-sec-3"></div></a>
+              <a href="<?php the_permalink( 15 ) ?>"><div class="btn-sec-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Desarrolla Proyectos de Investigación Internacional"></div></a> 
             </div>
             <div class="col s12 l3 bg-secundario">
-              <a href="<?php the_permalink( 19 ) ?>"><div class="btn-sec-4"></div></a>
+              <a href="<?php the_permalink( 19 ) ?>"><div class="btn-sec-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Puedes encontrar prácticas Pre y Post Profesionales"></div></a>
             </div>
           </div>
         </div>

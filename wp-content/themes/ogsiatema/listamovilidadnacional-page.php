@@ -126,13 +126,17 @@ Template Name: Página Movilidad Nivel Nacional
                     <div class="card" style="padding:0px!important;">
                         <div class="row">
                             <div class="col s12 m4 ">
-                            <img class="activator" src="<?php the_field( 'imagen_universidad' ); ?>">
+                            <img class="activator responsive-img" src="<?php the_field( 'imagen_universidad' ); ?>">
 
                             </div>
                             <div class="col s12 m8" style="margin: 15px 0px">
-                            <a class="color-oscuro" href="<?php the_field( 'enlace_universidad' ); ?>" target="_blank"><h6><?php the_title() ?></h6></a> 
+                                <div class="row flex-row">
+                                    <a class=" col s12 color-oscuro " href="<?php the_field( 'enlace_universidad' ); ?>" target="_blank"><h6 class="altura-igual-2"><?php the_title() ?></h6></a> 
+                                    
+                                </div>
 
                             </div>
+                            <a class="col s12 btn btn-flat color-secundario text-negrita " href="<?php the_field( 'documento_convenio' ); ?>" target="_black">Ver Convenio <i class="material-icons right">file_download</i></a>
                         </div>
                     </div>
                 </div>

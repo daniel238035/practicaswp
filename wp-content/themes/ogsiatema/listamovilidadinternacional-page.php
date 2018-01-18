@@ -115,15 +115,42 @@ Template Name: Página Movilidad Nivel Internacional
 
                             <div class="col s12 " id="sec_4" style="margin:15px 0px!important;">
                                 <h4 class="color-secundario">Vigencia y cronograma de la convocatoria para el 1er y 2o período académico</h4>
-                                <div class="text-justificado">
-                                    <?php the_field( 'vigencia_alianza' ); ?>
+                                <div>
+                                    <?php if( have_rows('vigencia_alianza') ): ?>
+                                    <table class="highlight responsive-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Etapa</th>
+                                                <th>Fechas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php while( have_rows('vigencia_alianza') ): the_row();
+                                            // variables
+                                            $content_etapa = get_sub_field('etapa_de_convocatoria');
+                                            $content_fecha = get_sub_field('fechas_de_etapa_de_convocatoria');
+                                        ?>
+                                        <tr>
+                                            <td>
+                                                <?php echo $content_etapa; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $content_fecha; ?>
+                                            </td>
+                                        </tr>
+                                        <?php endwhile; ?>
+                                        </tbody>
+                                    </table>
+                                    <?php endif; ?>
+                                    
                                 </div>
                             </div>
 
                             <div class="col s12 " id="sec_5" style="margin:15px 0px!important;">
                                 <h4 class="color-secundario">Beneficios</h4>
                                 <div class="text-justificado">
-                                    <?php the_field( 'beneficios_alianza' ); ?>
+                                    
+                                    <img src="<?php the_field( 'beneficios_alianza' ); ?>" class="responsive-img z-depth-1 imagen-evento" style="width: 100%;!important; height:450px!important;">
                                 </div>
                             </div>
 
@@ -132,6 +159,10 @@ Template Name: Página Movilidad Nivel Internacional
                                 <div class="text-justificado">
                                     <?php the_field( 'universidad_de_alianza' ); ?>
                                 </div>
+                                <ul class="collection">
+                                    <li class="collection-item"><a class="text-negrita color-oscuro"href="<?php the_field( 'relacion_universidades_alianza' ); ?>" target="_black"><H6>Relación de Universidades Elegibles <i class="material-icons right">file_download</i></H6> </a></li>
+                                </ul>
+                                
                             </div>
 
                             <div class="col s12 " id="sec_7" style="margin:15px 0px!important;">
@@ -143,8 +174,39 @@ Template Name: Página Movilidad Nivel Internacional
 
                             <div class="col s12 " id="sec_8" style="margin:15px 0px!important;">
                                 <h4 class="color-secundario">Documentos de postulación</h4>
-                                <div class="text-justificado">
-                                    <?php the_field( 'documentos_de_postulacion_alianza' ); ?>
+                                <div>
+                                    <?php if( have_rows('documentos_de_postulacion_alianza') ): ?>
+                                    <table class="highlight responsive-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Descripción</th>
+                                                <th>Archivo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php while( have_rows('documentos_de_postulacion_alianza') ): the_row();
+                                                // variables
+                                                $content_nombre = get_sub_field('nombre_de_documento_de_alianza');
+                                                $content_descripción = get_sub_field('descripcion_de_documento_de_alianza');
+                                                $content_archivo = get_sub_field('archivo_de_documento_de_alianza');
+                                                            ?>
+                                            <tr>
+                                                <td>
+                                                <?php echo $content_nombre; ?>
+                                                </td>
+                                                <td>
+                                                <?php echo $content_descripción; ?>
+                                                </td>
+                                                <td>
+                                                <a class="color-oscuro" href="<?php echo $content_archivo; ?>">Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <?php endwhile; ?>
+                                        </tbody>
+                                    </table>
+                                    <?php endif; ?>
+
                                 </div>
                             </div>
 
@@ -176,12 +238,7 @@ Template Name: Página Movilidad Nivel Internacional
                                 </div>
                             </div>
 
-                            <div class="col s12 " id="sec_12" style="margin:15px 0px!important;">
-                                <h4 class="color-secundario">Disposiciones Complementarias</h4>
-                                <div class="text-justificado">
-                                    <?php the_field( 'disposiciones_complementarias_alianza' ); ?>
-                                </div>
-                            </div>
+                            
 
                         </div>
                     </div>
@@ -290,7 +347,7 @@ Template Name: Página Movilidad Nivel Internacional
                                     <a href="#sec_12" class="black-text">Consideraciones para visa</a>
                                 </div>
                             </div>
-                            <div class="row" style="margin: 12px 0px!important;">
+                            <div class="row hide" style="margin: 12px 0px!important;">
                                 <div class="col s2 flex-row-start text-negrita">
                                     <i class="material-icons  color-secundario">collections_bookmark</i>
                                 </div>
@@ -299,20 +356,20 @@ Template Name: Página Movilidad Nivel Internacional
                                 </div>
                             </div>
                         </div>
-                        <div class="row hide" style="margin: 25px 0px!important;">
-                            <h5 class="titulo-borde-izquierdo-2">DOCUMENTOS</h5>
+                        <div class="row" style="margin: 25px 0px!important;">
+                            <h5 class="titulo-borde-izquierdo-2">DOCUMENTOS COMPLEMENTARIOS</h5>
                             <div class="col s12">
-                                <?php if( have_rows('lista_documentos_convocatoria') ): ?>
+                                <?php if( have_rows('documentos_complementarios') ): ?>
                                     <ul class="">
-                                    <?php while( have_rows('lista_documentos_convocatoria') ): the_row();
+                                    <?php while( have_rows('documentos_complementarios') ): the_row();
                                         // variables
-                                        $content_nombre_documento = get_sub_field('nombre_documento_convocatoria');
-                                        $content_archivo_convocatoria = get_sub_field('archivo_documento_convocatoria');
+                                        $content_nombre_documento = get_sub_field('nombre_documento_alianza');
+                                        $content_archivo = get_sub_field('archivo_documento_alianza');
                                     ?>
-                                    <a href="<?php echo $content_enlace; ?>" class="collection-item black-text" target="_blank"><?php echo $content_universidad; ?></a>
+                                    
                                     <li class="flex-row-start" style="margin:10px 0px!important">
                                         <i class="material-icons color-secundario" style="margin-right:5px!important">cloud_download</i>
-                                        <a href="<?php echo $content_archivo_convocatoria; ?>" class="black-text" target="_blank"><?php echo $content_nombre_documento; ?></a>
+                                        <a href="<?php echo $content_archivo; ?>" class="black-text" target="_blank"><?php echo $content_nombre_documento; ?></a>
                                     </li>
                                     <?php endwhile; ?>
                                     </ul>
@@ -354,7 +411,18 @@ Template Name: Página Movilidad Nivel Internacional
                 <?php wp_reset_query(); ?>
                 <!--LOOP Wordpress Fin-->
         </div>
-        <div id="test-swipe-2" class="col s12 red">Test 2</div>
+        <div id="test-swipe-2" class="col s12 ">
+            <div class="container seccion">
+                <div class="row">
+                    <h4>
+                        ERASMUS
+                    </h4>
+                    <p class="text-justificado">
+                        El programa ERASMUS+ permite la realización de movilidad académica en universidades de Europa. Actualmente, se ha implementado con la Universidad Pública de Navarra.
+                    </p>
+                </div>
+            </div>
+        </div>
         <div id="test-swipe-3" class="col s12">
             <div class="container seccion">
         
@@ -363,7 +431,7 @@ Template Name: Página Movilidad Nivel Internacional
                 <?php
                       query_posts(array(
                         "showposts" => 12,
-                        "cat" => 15,
+                        "cat" => 16,
                         //'post_type'=>'',
                         'order' => 'DES'
                         ));
@@ -373,13 +441,17 @@ Template Name: Página Movilidad Nivel Internacional
                     <div class="card" style="padding:0px!important;">
                         <div class="row">
                             <div class="col s12 m4 ">
-                            <img class="activator" src="<?php the_field( 'imagen_universidad_internacional' ); ?>">
+                                <img class="responsive-img activator" src="<?php the_field( 'imagen_universidad' ); ?>" style="height:86px; width:86px;">
 
                             </div>
                             <div class="col s12 m8" style="margin: 15px 0px">
-                            <a class="color-oscuro" href="<?php the_field( 'enlace_universidad_internacional' ); ?>" target="_blank"><h6><?php the_title() ?></h6></a> 
+                                <div class="row flex-row">
+                                    <a class=" col s12 color-oscuro " href="<?php the_field( 'enlace_universidad' ); ?>" target="_blank"><h6 class="altura-igual-2"><?php the_title() ?></h6></a> 
+                                    
+                                </div>
 
                             </div>
+                            <a class="col s12 btn btn-flat color-secundario text-negrita " href="<?php the_field( 'documento_convenio' ); ?>" target="_black">Ver Convenio <i class="material-icons right">file_download</i></a>
                         </div>
                     </div>
                 </div>

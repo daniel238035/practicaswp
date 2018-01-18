@@ -20,6 +20,7 @@ Template Name: Página Cooperacion Tecnica
               <div class="text-justificado white-text contenido-portada"><?php the_field( 'descripcion_pagina_convocatoria' ); ?>
               </div>
             </div>
+            
           </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Página Movilidad Nivel Internacional Alianza del Pacìfico
+Template Name: Página Movilidad 
 */
 ?>
 <?php get_header(); ?> 

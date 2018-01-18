@@ -105,6 +105,13 @@ $( document ).ready(function(){
       }
     });*/
 
+    //NUEVO SCROLL LENTO
+    $("#miBoton").click(function () {
+      $('html,body').animate({
+        scrollTop: $("#nosotros").offset().top
+      }, 2000);
+    });
+
     //MISMA ALTURA
     function equalHeight(group) {
     tallest = 0;
