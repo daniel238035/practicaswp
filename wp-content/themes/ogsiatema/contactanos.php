@@ -62,32 +62,33 @@ Template Name: Página Contáctanos
         </div>
         <div class="col s12 l7">
         <div class="row">
-           <form class="col s12">
+           <form class="col s12" action="validar.php" method="post">
               <div class="row">
                    <div class="input-field col s12 l6">
                    <i class="material-icons prefix">account_circle</i>
-                   <input id="icon_prefix" type="text" class="validate">
+                   <input id="icon_prefix" type="text" name="nombre_apellido" class="validate" required>
                     <label for="icon_prefix">Nombres y Apellidos</label>
                     </div>
                   <div class="input-field col s12 l6">
                     <i class="material-icons prefix">phone</i>
-                    <input id="icon_telephone" type="tel" class="validate">
+                    <input id="icon_telephone" type="tel" name="telefono"  class="validate" required>
                     <label for="icon_telephone">Telefono</label>
                   </div>
                    <div class="input-field col s12">
                     <i class="material-icons prefix">mail</i>
-                    <input id="icon_telephone" type="email" class="validate">
+                    <input id="icon_telephone" type="email" name="correo"  class="validate" required>
                     <label for="icon_telephone">Correo Electrónico</label>
                   </div>
                   <div class="input-field col s12">
                     <i class="material-icons prefix">announcement</i>
-                    <input id="icon_telephone" type="text" class="validate">
+                    <input id="icon_telephone" type="text" name="asunto"  class="validate" required>
                     <label for="icon_telephone">Asunto</label>
                   </div>
+                  <input class="waves-effect waves-light btn btn-principal" type="submit" value="ENVIAR" id="boton">
               </div>
               
              </form>
-             <a class="waves-effect waves-light btn btn-principal">Enviar</a>
+             
         </div>
         
         </div>
