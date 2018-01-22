@@ -39,6 +39,9 @@
 
 	add_filter( 'nav_menu_css_class', 'clase_li_menu_movil', 1, 3 );
 
+	//Agregando validar.php para envio de correo de Contacto
+
+	require get_parent_theme_file_path($file = 'validar.php');
 
 ?>
 

@@ -17,7 +17,7 @@
        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/swiper.min.css">
       <!--FONTS IMPORTADOS-->
       <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Poppins|Reem+Kufi" rel="stylesheet">
-
+      <link rel="shortcut icon" type="image/x-icon" href="<?php  bloginfo('template_directory');?>/images/logo.png" />
       <style>
         .portada-1{
           background: url('<?php bloginfo('template_url')?>/images/portadas/portada1.jpg');

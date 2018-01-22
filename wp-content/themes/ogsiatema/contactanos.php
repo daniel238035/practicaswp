@@ -80,10 +80,10 @@ Template Name: Página Contáctanos
                     <label for="icon_telephone">Correo Electrónico</label>
                   </div>
                   <div class="input-field col s12">
-                    <i class="material-icons prefix">announcement</i>
-                    <input id="icon_telephone" type="text" name="asunto"  class="validate" required>
-                    <label for="icon_telephone">Asunto</label>
+                    <textarea id="textarea1" class="materialize-textarea" name="asunto"  class="validate" required></textarea>
+                    <label for="textarea1">Mensaje</label>
                   </div>
+                  
                   <input class="waves-effect waves-light btn btn-principal" type="submit" value="ENVIAR" id="boton">
               </div>
               

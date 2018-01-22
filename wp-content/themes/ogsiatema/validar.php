@@ -1,16 +1,16 @@
-<?php
-    $destino="relacionesnacionaleseinternacionales
-    @unprg.edu.pe";
-    $nombres= $_POST["nombre_apellido"];
-    $correo=$_POST["correo"];
-    $telefono=$_POST["telefono"];
-    $asunto=$_POST["asunto"];
+<!--?php 
+    $destino="relacionesnacionaleseinternacionales@unprg.edu.pe";
+    $nombres = $_POST["nombre_apellido"];
+    $correo = $_POST["correo"];
+    $telefono = $_POST["telefono"];
+    $mensaje = $_POST["asunto"];
 
-    $contenido = "Nombre: " . $nombres . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nAsunto: " . $asunto;
+    $contenido = "Nombre: " . $nombres . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nMensaje: " . $mensaje;
 
-    mail($destino,$asunto,$contenido);
+    mail($destino,"Contácto desde nuestra Web",$contenido);
 
-    header("Location:gracias.html");
+    header("Location:gracias.php");
 
 
-?>
+?-->
+
