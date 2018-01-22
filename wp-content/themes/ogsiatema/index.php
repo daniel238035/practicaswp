@@ -72,33 +72,81 @@
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
             <!--Llamar Pagina de  Wordpress Fin-->
+            <div class="col s12 item">
+               <a class="btn btn-principal  text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
             </div>
+            </div>
+            
+            <!--OCULTAR LISTA-->
+            <div class=" col s12 l4 hide">
+              <div class="container">
+                  <div class=" card card-seccion-2 row white">
+                    <div class="swiper-container swiper-container-horizontal-3  ">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div>
+                            <div class="col s12 ">
+                                <h5 class="titulo-borde-izquierdo-2">Convenios <br> Nacionales</h5>
+                              </div>
 
-            <div class=" col s12 l4 ">
-            <div class="container">
-                <div class=" card card-seccion-2 row white">
-                  <div class="swiper-container swiper-container-horizontal-3  ">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div>
-                          <div class="col s12 ">
-                              <h5 class="titulo-borde-izquierdo-2">Convenios <br> Nacionales</h5>
-                            </div>
+                              <div class="row">
+                                <!--REPETIDOR DE ARCHIVOS COOPERACION NACIONAL inicio -->
+                                <?php if( have_rows('lista_archivo_cooperacion') ): $i = 0; ?>
+                                
+                                  <?php while( have_rows('lista_archivo_cooperacion') ): the_row();
+                                      // variables
+                                      $content_nombre_archivo = get_sub_field('nombre_de_archivo_cooperacion');
+                                      $content_archivo = get_sub_field('archivo_cooperacion');
+                                  ?>
 
-                            <div class="row">
-                              <!--REPETIDOR DE ARCHIVOS COOPERACION NACIONAL inicio -->
-                              <?php if( have_rows('lista_archivo_cooperacion') ): $i = 0; ?>
+                                  <?php $i++; ?>
+                                  <?php if( $i > 3 ): ?>
+                                  <?php break; ?>
+                                  <?php endif; ?>
+                                  <div class="col s12 m12">
+                                      <div class="" style="padding:0px!important;">
+                                          <div class="row">
+                                              <div class="col s12 m4 ">
+                                              <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
+
+                                              </div>
+                                              <div class="col s12 m8" style="margin: 15px 0px">
+                                              <a class="color-oscuro" href="<?php echo $content_archivo; ?>" target="_blank"><h6><?php echo $content_nombre_archivo; ?></h6></a> 
+
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <?php endwhile; else : endif ?>
+                                  
+                                  <!--REPETIDOR DE ARCHIVOS COOPERACION NACIONAL fin -->
+                              </div>
                               
-                                <?php while( have_rows('lista_archivo_cooperacion') ): the_row();
-                                    // variables
-                                    $content_nombre_archivo = get_sub_field('nombre_de_archivo_cooperacion');
-                                    $content_archivo = get_sub_field('archivo_cooperacion');
-                                ?>
 
-                                <?php $i++; ?>
-                                <?php if( $i > 3 ): break; ?>
-                                <?php endif; ?>
-                                <div class="col s12 m12">
+                              <div class="col s12 item">
+                                <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div>
+                            <div class="col s12 ">
+                                <h5 class="titulo-borde-izquierdo-2">Convenios Internacionales</h5>
+                              </div>
+
+                              <div class="row">
+
+                                  <?php if( have_rows('lista_archivo_cooperacion_internacional') ):  $i = 0;?>
+                                
+                                  <?php while( have_rows('lista_archivo_cooperacion_internacional') ): the_row();
+                                      // variables
+                                      $content_nombre_archivo = get_sub_field('nombre_archivo_cooperacion_internacional');
+                                      $content_archivo = get_sub_field('archivo_cooperacion_internacional');
+                                  ?>
+                                  <?php $i++; ?>
+                                  <?php if( $i > 3 ): break; ?>
+                                  <?php endif; ?>
+                                  <div class="col s12 ">
                                     <div class="" style="padding:0px!important;">
                                         <div class="row">
                                             <div class="col s12 m4 ">
@@ -108,70 +156,27 @@
                                             <div class="col s12 m8" style="margin: 15px 0px">
                                             <a class="color-oscuro" href="<?php echo $content_archivo; ?>" target="_blank"><h6><?php echo $content_nombre_archivo; ?></h6></a> 
 
-                                          </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <?php endwhile; else : endif ?>
-                                
-                                <!--REPETIDOR DE ARCHIVOS COOPERACION NACIONAL fin -->
-                            </div>
-                            
-
-                            <div class="col s12 item">
-                              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div>
-                          <div class="col s12 ">
-                              <h5 class="titulo-borde-izquierdo-2">Convenios Internacionales</h5>
-                            </div>
-
-                            <div class="row">
-
-                                <?php if( have_rows('lista_archivo_cooperacion_internacional') ):  $i = 0;?>
-                              
-                                <?php while( have_rows('lista_archivo_cooperacion_internacional') ): the_row();
-                                    // variables
-                                    $content_nombre_archivo = get_sub_field('nombre_archivo_cooperacion_internacional');
-                                    $content_archivo = get_sub_field('archivo_cooperacion_internacional');
-                                ?>
-                                <?php $i++; ?>
-                                <?php if( $i > 3 ): break; ?>
-                                <?php endif; ?>
-                                <div class="col s12 ">
-                                  <div class="" style="padding:0px!important;">
-                                      <div class="row">
-                                          <div class="col s12 m4 ">
-                                          <img class ="responsive-img" src="<?php bloginfo('template_url')?>/images/icono-descargar.png">
-
-                                          </div>
-                                          <div class="col s12 m8" style="margin: 15px 0px">
-                                          <a class="color-oscuro" href="<?php echo $content_archivo; ?>" target="_blank"><h6><?php echo $content_nombre_archivo; ?></h6></a> 
-
-                                          </div>
-                                      </div>
                                   </div>
-                                </div>
-                              
-                                <?php endwhile; else : endif ?>
+                                
+                                  <?php endwhile; else : endif ?>
 
-                          
-                      </div>
+                            
+                        </div>
 
-                            <div class="col s12 item">
-                              <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
-                            </div>
+                              <div class="col s12 item">
+                                <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
+                              </div>
+                          </div>
                         </div>
                       </div>
+                      <div class="swiper-pagination swiper-pagination-v"></div>
                     </div>
-                    <div class="swiper-pagination swiper-pagination-v"></div>
                   </div>
-                </div>
+              </div>
             </div>
-          </div>
 
           </div>
       </div>
@@ -195,7 +200,7 @@
             </div>
             
             <div class="col s12 item">
-               <a class="btn btn-flat color-secundario text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
+               <a class="btn btn-principal  text-negrita" href="<?php the_permalink( 89 ) ?>">Ver más</a>
             </div>
           </div>
       </div>
